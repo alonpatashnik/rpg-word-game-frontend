@@ -1,43 +1,36 @@
-import './style/createAccount'
+import './style/login'
 import 'url("https://fonts.googleapis.com/css2?family=Silkscreen&display=swap")'
 
-
-export default function createAccount() {
+export default function login() {
     return (
-        <section>
-            <form>
+        <section className="m-4 justify-content-center">
+            <form id="inputCon">
                 <section>
                     <p className="text-white text-center fs-2">
-                    Create Account 
+                    Login 
                     </p>
                 </section>
                 <section className="row mb-2">
-                    <label for="emailInput" class="col-sm-2 col-form-label text-white text-end">Email</label>
+                    <label for="emailInput" className="col-sm-2 col-form-label text-white text-end">Email</label>
                     <section className="col-sm-10">
-                        <input type="email" class="form-control"/>
+                        <input type="email" className="form-control"/>
                     </section>
                 </section>
                 <section className="row mb-2">
-                    <label for="inputUsername" class="col-sm-2 col-form-label text-white text-end">Username</label>
+                    <label for="inputPassword" className="col-sm-2 col-form-label text-white text-end">Password</label>
                     <section className="col-sm-10">
-                        <input type="text" class="form-control"/>
-                    </section>
-                </section>
-                <section className="row mb-2">
-                    <label for="inputPassword" class="col-sm-2 col-form-label text-white text-end">Password</label>
-                    <section className="col-sm-10">
-                        <input type="password" class="form-control"/>
+                        <input type="password" className="form-control"/>
                     </section>
                 </section>
                 <section className="form-check form-check-reverse">
                     <input className="form-check-input" type="checkbox" value="" id="showPass"/>
-                    <label className="form-check-label" for="showPass">
+                    <label className="form-check-label text-white" for="showPass">
                         Show Password
                     </label>
                 </section>
                 <section>
                     <p className="text-white text-center">
-                        Already have an account? Login here.
+                        Don't have an account? Sign up here.
                     </p>
                 </section>
             </form>
