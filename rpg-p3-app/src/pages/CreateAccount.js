@@ -1,3 +1,5 @@
+import './style/createAccount'
+
 export default function createAccount() {
     return (
         <section>

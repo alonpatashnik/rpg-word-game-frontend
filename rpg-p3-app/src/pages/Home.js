@@ -5,6 +5,8 @@
 // //    this for loading data?
 // }
 
+import './style/home'
+
 export default function Home() {
     return (
     <section className="text-center vh-100">
