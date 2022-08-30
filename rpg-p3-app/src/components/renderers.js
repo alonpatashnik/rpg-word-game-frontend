@@ -13,4 +13,4 @@ class Box extends PureComponent {
     }
 }
 
-export { Box }
+export { Box };
