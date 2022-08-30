@@ -1,7 +1,7 @@
 import './style/login'
 import 'url("https://fonts.googleapis.com/css2?family=Silkscreen&display=swap")'
 
-export default function login() {
+export default function Login() {
     return (
         <section className="m-4 justify-content-center">
             <form id="inputCon">
