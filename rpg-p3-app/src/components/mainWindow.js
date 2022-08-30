@@ -31,7 +31,7 @@ export default function MainWindow() {
     };
 
     // const handlePageChange = (page) => setCurrentPage(page);
-
+        // I think this is where we assign grab the buttons from the various pages that lead to the other pages. can there be multiple??
     // return (
 
     // )
