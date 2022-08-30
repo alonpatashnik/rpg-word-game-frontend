@@ -1,7 +1,7 @@
 import './style/LoginHome'
 import 'url("https://fonts.googleapis.com/css2?family=Silkscreen&display=swap")'
 
-export default function Home() {
+export default function LoginHome() {
     return (
         <section className="text-center vh-100">
         <section className="h-100" id="contentCon">

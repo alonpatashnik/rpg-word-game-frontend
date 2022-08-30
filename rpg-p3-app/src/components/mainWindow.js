@@ -4,7 +4,7 @@ import Title from './pages/Title';
 import Login from './pages/Login';
 import CreateAccount from './pages/CreateAccount';
 import LoginHome from './pages/LoginHome';
-import NewAccountHome from './pages/NewAccountHome';
+import NewHome from './pages/NewHome';
 
 export default function MainWindow() {
     const [currentPage, setCurrentPage] = useState('Home');
@@ -26,7 +26,7 @@ export default function MainWindow() {
         if (currentPage === 'LoginHome') {
             return <LoginHome />;
         }
-        return <NewAccountHome />;
+        return <NewHome />;
 
     };
 
