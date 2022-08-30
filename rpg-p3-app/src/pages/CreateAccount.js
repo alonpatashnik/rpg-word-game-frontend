@@ -20,6 +20,12 @@ export default function createAccount() {
                         <input type="password" class="form-control"/>
                     </section>
                 </section>
+                <section className="form-check form-check-reverse">
+                    <input className="form-check-input" type="checkbox" value="" id="showPass"/>
+                    <label className="form-check-label" for="showPass">
+                        Show Password
+                    </label>
+                </section>
             </form>
         </section>
     )
