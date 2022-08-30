@@ -2,7 +2,7 @@ import './style/createAccount'
 import 'url("https://fonts.googleapis.com/css2?family=Silkscreen&display=swap")'
 
 
-export default function createAccount() {
+export default function CreateAccount() {
     return (
         <section>
             <form>
