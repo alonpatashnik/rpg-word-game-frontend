@@ -7,6 +7,12 @@ export default function MainWindow() {
     const [currentPage, setCurrentPage] = useState('Home');
 
     const renderPage = () => {
-        
-    }
+        if (currentPage === 'Home') {
+            return <Home />;
+        }
+        if (currentPage === 'Login') {
+            return <Login />;
+        }
+        return <createAccount />;
+    };
 }
