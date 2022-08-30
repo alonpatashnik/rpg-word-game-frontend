@@ -30,9 +30,21 @@ export default function MainWindow() {
 
     };
 
+    // page change options:
+        // from title, to Home, via button
+        // from Home to: Login (button), create Account (btn)
+        // from Login to: create Account (btn), loginHome (submit login)
+        // From create Account to: Login (btn), newHome (submit sign up)
+        // from loginHome to new game or continue (take them to the game window one, so import that?)
+        // from newhome to new game (game window one, import?)
+
+
     // const handlePageChange = (page) => setCurrentPage(page);
         // I think this is where we assign grab the buttons from the various pages that lead to the other pages. can there be multiple??
     // return (
 
     // )
 }
+
+// fetch requests will be what has to match up with back end
+// the api end ones
