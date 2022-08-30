@@ -13,6 +13,7 @@
     --shadowMute: #344125;
     /* asparagus */
     --highlightMute: #92ad71;
+
 }
 
 body {
@@ -23,18 +24,21 @@ body {
     font-family: 'Silkscreen', cursive;
 }
 
-#startButton {
+.btn {
+/* #startButton { */
     font-family: 'Silkscreen', cursive;
     border: none;
     background-color: var(--mute);
     box-shadow: 0 10px var(--shadowMute);
 }
 
-#startButton :hover {
+/* this isn't working- not gonna be red, just makes it obvious whether it's working or not */
+/* now its black???? */
+.btn :hover {
     background-color: var(--highlightMute)!important;
 }
 
-#startButton :active {
+.btn :active {
     background-color: var(--highlightMute)!important;
     box-shadow: 0 5px var(--shadowMute)!important;
     transform: translateY(3px)!important;
