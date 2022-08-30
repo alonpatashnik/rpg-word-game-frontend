@@ -38,3 +38,5 @@ functionTimer() {
     
     const rootElement = document.getElementById("root");
         ReactDOM.render(<App />, rootElement);
+
+        //adding a comment line so it will let me push because this is being sillllly right now, and my other push request just ??? disappeared for no reason at all???
