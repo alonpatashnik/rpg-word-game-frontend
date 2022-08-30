@@ -4,8 +4,8 @@ import 'url("https://fonts.googleapis.com/css2?family=Silkscreen&display=swap")'
 
 export default function CreateAccount() {
     return (
-        <section>
-            <form>
+        <section className="m-4 justify-content-center">
+            <form id="inputCon">
                 <section>
                     <p className="text-white text-center fs-2">
                     Create Account 
