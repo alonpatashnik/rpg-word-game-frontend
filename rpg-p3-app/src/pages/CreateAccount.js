@@ -2,6 +2,11 @@ export default function createAccount() {
     return (
         <section>
             <form>
+                <section>
+                    <p className="text-white text-center fs-2">
+                    Create Account 
+                    </p>
+                </section>
                 <section className="row mb-2">
                     <label for="emailInput" class="col-sm-2 col-form-label">Email</label>
                     <section className="col-sm-10">
