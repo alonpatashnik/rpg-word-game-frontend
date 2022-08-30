@@ -1,0 +1,48 @@
+:root {
+    font-family: 'Silkscreen', cursive;
+    --background: #05080F;
+    /* opal */
+    --secondary: #9AC6C5;
+    /* amaranth purple */
+    --accent: #b6244f;
+    /* fern green */
+    --mute: #607744;
+    /* pastel pink */ 
+    --light: #da9f93;
+    /* kombu green */
+    --shadowMute: #344125;
+    /* asparagus */
+    --highlightMute: #92ad71;
+}
+
+body {
+    background-color: var(--background);
+}
+
+#title {
+    font-family: 'Silkscreen', cursive;
+}
+
+#startButton {
+    font-family: 'Silkscreen', cursive;
+    border: none;
+    background-color: var(--mute);
+    box-shadow: 0 10px var(--shadowMute);
+}
+
+#startButton :hover {
+    background-color: var(--highlightMute)!important;
+}
+
+#startButton :active {
+    background-color: var(--highlightMute)!important;
+    box-shadow: 0 5px var(--shadowMute)!important;
+    transform: translateY(3px)!important;
+}
+
+#contentCon {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
