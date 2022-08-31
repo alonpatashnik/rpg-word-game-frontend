@@ -1,0 +1,21 @@
+:root {
+    font-family: 'Silkscreen', sans-serif;
+    --background: #05080F;
+    /* opal */
+    --secondary: #9AC6C5;
+    /* amaranth purple */
+    --accent: #b6244f;
+    /* fern green */
+    --mute: #607744;
+    /* pastel pink */ 
+    --light: #da9f93;
+    /* kombu green */
+    --shadowMute: #344125;
+    /* asparagus */
+    --highlightMute: #92ad71;
+
+}
+
+.titleCon {
+    font-family: 'Silkscreen', sans-serif;
+}
