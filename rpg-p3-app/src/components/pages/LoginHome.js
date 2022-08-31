@@ -2,6 +2,7 @@ import './style/LoginHome'
 import 'url("https://fonts.googleapis.com/css2?family=Silkscreen&display=swap")'
 
 export default function LoginHome() {
+    // fetch request here, authorization option with token on localstore
     return (
     <section className="text-center vh-100">
         <section className="h-100" id="contentCon">
@@ -16,3 +17,14 @@ export default function LoginHome() {
     </section> 
     )
 }
+
+// import react useEffect -> run on page load
+
+// if token send to stuff already above
+// if no token, send to title
+
+// catch for people making an account and then immediately leaving
+// if character_id = true, allow
+// if character_id = false, send to New Home
+
+// could do a conditional 
