@@ -1,0 +1,8 @@
+* {
+    border-radius: border-box;
+}
+
+#roundedCircle {
+    justify-content: center;
+    align-items: center;
+}
