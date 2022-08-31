@@ -9,6 +9,12 @@ function Game() {
         <p className="text-start fs-1">
             Game Title
         </p>
+        <button class="btn" data-bs-toggle="offcanvas" href="#offCanvasMenu" role="button" aria-controls="offCanvasMenu" >
+            menu
+        </button>
+    </section>
+    // <!-- offcanvas -->
+    <section class="offcanvas offcanvas-end show text-bg-dark" tabindex="-1" id="offCanvasMenu" aria-labelledby="offcanvasDarkLabel">
     </section>
  )
 }
