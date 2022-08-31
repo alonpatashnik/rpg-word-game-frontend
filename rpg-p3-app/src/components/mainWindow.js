@@ -5,6 +5,7 @@ import Login from './pages/Login';
 import CreateAccount from './pages/CreateAccount';
 import LoginHome from './pages/LoginHome';
 import NewHome from './pages/NewHome';
+import Game from './pages/gameWindow';
 
 import {
     useHref,
