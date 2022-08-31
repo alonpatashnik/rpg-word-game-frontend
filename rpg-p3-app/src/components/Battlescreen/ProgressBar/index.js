@@ -1,11 +1,11 @@
 import ProgressBar from 'react-bootstrap/ProgressBar';
 
-function AnimatedHP(){
+export function AnimatedHP(){
     return (
-        <div>
+        <section>
             <ProgressBar stripped variant = "danger" now = {100} ></ProgressBar>
             <ProgressBar animated now = {100} ></ProgressBar>
-        </div>
+        </section>
     )}
 
 export default AnimatedHP;
