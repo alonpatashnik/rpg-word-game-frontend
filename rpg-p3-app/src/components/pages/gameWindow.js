@@ -28,12 +28,21 @@ export default function Game() {
             <p className="text-start fs-1">
                 Game Title
             </p>
-            <button className="btn" data-bs-toggle="offcanvas" href="#offCanvasMenu" role="button" aria-controls="offCanvasMenu" >
+            <button className="btn" data-bs-toggle="offcanvas" data-bs-target="#offCanvasMenu" role="button" aria-controls="offCanvasMenu">
                 menu
             </button>
         </section>
         // <!-- offcanvas -->
         <section className="offcanvas offcanvas-end show text-bg-dark" tabindex="-1" id="offCanvasMenu" aria-labelledby="offcanvasDarkLabel">
+            section class="offcanvas-header">
+                <h5 className="offcanvas-title" id="offcanvasMenuLabel">
+                    Looking for something?
+                </h5>
+                <button type="button" className="btn-close-white" data-bs-dismiss="offcanvas" aria-label="close"></button>
+            </section>
+            <section className="offcanvas-body">
+
+            </section>
         </section>
      )
 }
