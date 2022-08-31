@@ -6,6 +6,8 @@ import CreateAccount from './pages/CreateAccount';
 import LoginHome from './pages/LoginHome';
 import NewHome from './pages/NewHome';
 
+// do i need to also have gamewindow a thing from here???
+
 export default function MainWindow() {
     const [currentPage, setCurrentPage] = useState('Home');
 
