@@ -11,6 +11,20 @@ export default function Game() {
                     <section class="modal-header">
                         <h4 class="modal-title" id="menuLabel">game paused</h4>
                     </section>
+                    <section class="modal-body">
+                        <section class="list-group">
+                            <button type="button" class="list-group-item list-group-item-action">
+                                Reload Last CheckPoint
+                            </button>
+                            <button type="button" class="list-group-item list-group-item-action">
+                                Home
+                            </button>
+                            <button type="button" class="list-group-item list-group-item-action">
+                                Logout
+                            </button>
+                        </section>
+
+                    </section>
                 </section>
             </section>
 
