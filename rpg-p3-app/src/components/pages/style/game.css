@@ -1,5 +1,4 @@
 :root {
-    font-family: 'Silkscreen', sans-serif;
     --background: #05080F;
     /* opal */
     --secondary: #9AC6C5;
@@ -16,6 +15,37 @@
 
 }
 
-.titleCon {
+*{
     font-family: 'Silkscreen', sans-serif;
 }
+
+#gameContainer {
+    background-color: var(--background);
+}
+
+#modalBtn {
+    padding-right: 3rem;
+    padding-top: 2rem;
+}
+
+.modal-title {
+    text-align: center;
+    padding-left: 2rem;
+}
+
+.modal-content {
+    background-color: var(--shadowMute);
+
+}
+
+.list-group-item {
+    color: white;
+    background-color: var(--shadowMute);
+    border: none;
+    text-align: center;
+}
+
+/* .list-group-item :hover{
+    background-color: var(--shadowMute) !important;
+    color: var(--light) !important;
+} */
