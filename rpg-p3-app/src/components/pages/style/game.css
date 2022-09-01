@@ -1,0 +1,51 @@
+:root {
+    --background: #05080F;
+    /* opal */
+    --secondary: #9AC6C5;
+    /* amaranth purple */
+    --accent: #b6244f;
+    /* fern green */
+    --mute: #607744;
+    /* pastel pink */ 
+    --light: #da9f93;
+    /* kombu green */
+    --shadowMute: #344125;
+    /* asparagus */
+    --highlightMute: #92ad71;
+
+}
+
+*{
+    font-family: 'Silkscreen', sans-serif;
+}
+
+#gameContainer {
+    background-color: var(--background);
+}
+
+#modalBtn {
+    padding-right: 3rem;
+    padding-top: 2rem;
+}
+
+.modal-title {
+    text-align: center;
+    padding-left: 2rem;
+}
+
+.modal-content {
+    background-color: var(--shadowMute);
+
+}
+
+.list-group-item {
+    color: white;
+    background-color: var(--shadowMute);
+    border: none;
+    text-align: center;
+}
+
+/* .list-group-item :hover{
+    background-color: var(--shadowMute) !important;
+    color: var(--light) !important;
+} */
