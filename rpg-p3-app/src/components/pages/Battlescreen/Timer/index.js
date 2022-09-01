@@ -4,7 +4,7 @@ import { CountdownCircleTimer } from 'react-countdown-circle-timer';
 
 import './timer.css';
 
-const formatRemaningTime = time => {
+const formatRemainingTime = time => {
     const minutes = Math.floor((time % 300) / 60);
     const seconds = time % 60;
 
