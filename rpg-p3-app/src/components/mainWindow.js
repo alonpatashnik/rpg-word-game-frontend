@@ -34,6 +34,9 @@ export default function MainWindow() {
         if (currentPage === 'LoginHome') {
             return <LoginHome />;
         }
+        if (currentPage === 'Game') {
+            return <Game />;
+        }
         return <NewHome />;
 
     };
