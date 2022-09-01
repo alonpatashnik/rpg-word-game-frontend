@@ -8,46 +8,16 @@ import NewHome from './pages/NewHome';
 import Game from './pages/gameWindow';
 
 import {
+    BrowserRouter,
     Route,
-    Router,
     Routes,
 } from "react-router-dom";
 
 // do i need to also have gamewindow a thing from here???
 
 export default function MainWindow() {
-    const [currentPage, setCurrentPage] = useState('Home');
-
-    const renderPage = () => {
-        // make this title, and make a home page that, after clicking "embark on adventure" it brings them to the option to login or sign up, from login -> option to continue or make new game (if new game, work on skipping intro at some point for users who have already played). user is then given the option to start
-        if (currentPage === 'Title') {
-            return <Title />;
-        }
-        if (currentPage === 'Home') {
-            return <Home />;
-        }
-        if (currentPage === 'Login') {
-            return <Login />;
-        }
-        if (currentPage === 'CreateAccount') {
-            return <CreateAccount />;
-        }
-        if (currentPage === 'LoginHome') {
-            return <LoginHome />;
-        }
-        if (currentPage === 'NewHome') {
-            return <NewHome />;
-        }
-        if (currentPage === 'Game') {
-            return <Game />;
-        }
-        return <NewHome />;
-
-    };
-    renderPage();
-    // where do i set current page???
-    // i don't remember the exact layout that was used here....
-    <Router>
+     return (
+<BrowserRouter>
         <Routes>
             <Route path="/" element={<Title/>}></Route>
             <Route path='/Home' element={<Home/>}></Route>
@@ -57,7 +27,12 @@ export default function MainWindow() {
             <Route path='/Dashboard' element={<LoginHome/>}></Route>
             <Route path='/game' element={<Game/>}></Route>
         </Routes>
-    </Router>
+</BrowserRouter>
+    )
+    // where do i set current page???
+    // i don't remember the exact layout that was used here....
+
+   
    
 };
 
