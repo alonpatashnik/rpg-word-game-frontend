@@ -3,26 +3,21 @@ import './style/game'
 import 'url("https://fonts.googleapis.com/css2?family=Silkscreen&display=swap")'
 
 export default function Game() {
-    return 
-      
+    return (
+    <section id="gameContainer" class="vh-100 text-white">
+        <section class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="pauseMenu" aria-hidden="true">
+            <section class="modal-dialog">
+                <section class="modal-content">
+                    <section class="modal-header">
+                        <h4 class="modal-title" id="menuLabel">game paused</h4>
+                    </section>
+                </section>
+            </section>
+
+        </section>
+
+    </section>
+    )   
 }
 
 
-// function Game() {
-//  return (
-//     // <!-- think I'm going to use an offcanvas component for the side nav -->
-//     <section classNameName="titleCon">
-//         <p classNameName="text-start fs-1">
-//             Game Title
-//         </p>
-//         <button className="btn" data-bs-toggle="offcanvas" href="#offCanvasMenu" role="button" aria-controls="offCanvasMenu" >
-//             menu
-//         </button>
-//     </section>
-//     // <!-- offcanvas -->
-//     <section className="offcanvas offcanvas-end show text-bg-dark" tabindex="-1" id="offCanvasMenu" aria-labelledby="offcanvasDarkLabel">
-//     </section>
-//  )
-// }
-
-// export default Game;
