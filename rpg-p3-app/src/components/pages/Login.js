@@ -1,5 +1,5 @@
-import './style/login'
-import 'url("https://fonts.googleapis.com/css2?family=Silkscreen&display=swap")'
+import './style/login.css'
+// import 'url("https://fonts.googleapis.com/css2?family=Silkscreen&display=swap")'
 
 export default function Login() {
     return (

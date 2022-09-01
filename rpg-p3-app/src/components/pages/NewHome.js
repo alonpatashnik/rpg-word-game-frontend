@@ -1,5 +1,5 @@
-import './style/newHome'
-import 'url("https://fonts.googleapis.com/css2?family=Silkscreen&display=swap")'
+import './style/newHome.css'
+// import 'url("https://fonts.googleapis.com/css2?family=Silkscreen&display=swap")'
 
 export default function NewHome() {
     return (

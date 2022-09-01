@@ -1,5 +1,5 @@
-import './style/LoginHome'
-import 'url("https://fonts.googleapis.com/css2?family=Silkscreen&display=swap")'
+import './style/LoginHome.css'
+// import 'url("https://fonts.googleapis.com/css2?family=Silkscreen&display=swap")'
 
 export default function LoginHome() {
     // fetch request here, authorization option with token on localstore

@@ -9,9 +9,8 @@ import Game from './pages/gameWindow';
 
 import {
     Route,
+    Router,
     Routes,
-    useHref,
-    useLinkClickHandler,
 } from "react-router-dom";
 
 // do i need to also have gamewindow a thing from here???
@@ -45,17 +44,22 @@ export default function MainWindow() {
         return <NewHome />;
 
     };
+    renderPage();
     // where do i set current page???
     // i don't remember the exact layout that was used here....
-    <Routes>
-        <Route path="/" element={<Title/>}></Route>
-        <Route path='/Home' element={<Home/>}></Route>
-        <Route path='/Login' element={<Login/>}></Route>
-        <Route path='/SignUp' element={<CreateAccount/>}></Route>
-        <Route path='/newHome' element={<NewHome/>}></Route>
-        <Route path='/Dashboard' element={<LoginHome/>}></Route>
-        <Route path='/game' element={<Game/>}></Route>
-    </Routes>
+    <Router>
+        <Routes>
+            <Route path="/" element={<Title/>}></Route>
+            <Route path='/Home' element={<Home/>}></Route>
+            <Route path='/Login' element={<Login/>}></Route>
+            <Route path='/SignUp' element={<CreateAccount/>}></Route>                
+            <Route path='/newHome' element={<NewHome/>}></Route>
+            <Route path='/Dashboard' element={<LoginHome/>}></Route>
+            <Route path='/game' element={<Game/>}></Route>
+        </Routes>
+    </Router>
+   
+};
 
 
     // page change options:
@@ -72,7 +76,7 @@ export default function MainWindow() {
     // return (
 
     // )
-}
+
 
 // fetch requests will be what has to match up with back end
 // the api end ones

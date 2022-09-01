@@ -5,8 +5,8 @@
 // //    this for loading data?
 // }
 
-import './style/home'
-import 'url("https://fonts.googleapis.com/css2?family=Silkscreen&display=swap")'
+import './style/home.css'
+// import 'url("https://fonts.googleapis.com/css2?family=Silkscreen&display=swap")'
 
 export default function Home() {
     return (

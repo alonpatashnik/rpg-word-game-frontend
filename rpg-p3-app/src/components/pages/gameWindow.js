@@ -1,54 +1,54 @@
 // game window will then hold the entirety of the game, so no more pages after this one.
-import './style/game'
-import 'url("https://fonts.googleapis.com/css2?family=Silkscreen&display=swap")'
-import * as bootstrap from 'bootstrap'
+import './style/game.css'
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
+import CloseButton from 'react-bootstrap/CloseButton';
 
 export default function Game() {
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+    
     return (
+        <>
         <section id="gameContainer" className="vh-100 text-white">
       
         <section className="d-flex justify-content-end">
-            <button type="button" id="modalBtn" className="btn border border-0 text-white" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+            <Button  onClick={handleShow} type="button" id="modalBtn" className="btn border border-0 text-white" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                 Pause
-            </button>
+            </Button>
         </section>
 
+        <Modal show={show} onHide={handleClose} id="staticBackdrop">
+            <Modal.Header CloseButton>
+                <Modal.Title id="menuLabel">game paused</Modal.Title>
+            </Modal.Header>
 
-        <section className="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="pauseMenu" aria-hidden="true">
-            <section className="modal-dialog modal-dialog-centered">
-                <section className="modal-content">
-                    <section className="modal-header border border-0 d-flex">
-                        <h4 className="modal-title flex-grow-1" id="menuLabel">game paused</h4>
-                        <button type="button" className="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </section>
-                    <section className="modal-body">
-                        <section className="list-group">
+            <Modal.Body>
+                       <section className="list-group">
 
-                            <button type="button" className="list-group-item list-group-item-action">
+                            <Button type="button" className="list-group-item list-group-item-action">
                                 Reload Last CheckPoint
-                            </button>
+                            </Button>
 
-                            <button type="button" className="list-group-item list-group-item-action">
+                            <Button type="button" className="list-group-item list-group-item-action">
                                 Home
-                            </button>
+                            </Button>
 
-                            <button type="button" className="list-group-item list-group-item-action">
+                            <Button type="button" className="list-group-item list-group-item-action">
                                 Logout
-                            </button>
+                            </Button>
 
-                            <button type="button" className="list-group-item list-group-item-action" data-bs-dismiss="modal">
+                            <Button type="button" className="list-group-item list-group-item-action" data-bs-dismiss="modal">
                                 Resume
-                            </button>
+                            </Button>
 
                         </section>
-
-                    </section>
-                </section>
-            </section>
-
-        </section>
-
+            </Modal.Body>
+        </Modal>
     </section>
+    </>
     )   
 };
 

@@ -1,5 +1,5 @@
-import './style/createAccount'
-import 'url("https://fonts.googleapis.com/css2?family=Silkscreen&display=swap")'
+import './style/createAccount.css'
+
 
 
 export default function CreateAccount() {
