@@ -26,9 +26,8 @@ function Title({ currentPage, handlePageChange}) {
     <section className="text-center vh-100">
         <section className="h-100" id="contentCon">
             <p className="text-wrap text-white fs-1" id="title">Game Title</p>
-            {/* haven't set /Home so idk... */}
             <Link to="/Home">
-                <button type="button" id="startButton" class="btn bg-secondary text-light p-3 w-25 align-self-center">
+                <button onClick={() => navigate('/Home')} type="button" id="startButton" class="btn bg-secondary text-light p-3 w-25 align-self-center">
                     embark on adventure
                 </button>
             </Link>

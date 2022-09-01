@@ -8,6 +8,8 @@ import NewHome from './pages/NewHome';
 import Game from './pages/gameWindow';
 
 import {
+    Route,
+    Routes,
     useHref,
     useLinkClickHandler,
 } from "react-router-dom";
@@ -34,12 +36,27 @@ export default function MainWindow() {
         if (currentPage === 'LoginHome') {
             return <LoginHome />;
         }
+        if (currentPage === 'NewHome') {
+            return <NewHome />;
+        }
         if (currentPage === 'Game') {
             return <Game />;
         }
         return <NewHome />;
 
     };
+    // where do i set current page???
+    // i don't remember the exact layout that was used here....
+    <Routes>
+        <Route path="/" element={<Title/>}></Route>
+        <Route path='/Home' element={<Home/>}></Route>
+        <Route path='/Login' element={<Login/>}></Route>
+        <Route path='/SignUp' element={<CreateAccount/>}></Route>
+        <Route path='/newHome' element={<NewHome/>}></Route>
+        <Route path='/Dashboard' element={<LoginHome/>}></Route>
+        <Route path='/game' element={<Game/>}></Route>
+    </Routes>
+
 
     // page change options:
         // from title, to Home, via button
