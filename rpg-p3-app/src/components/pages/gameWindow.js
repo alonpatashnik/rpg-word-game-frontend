@@ -3,6 +3,7 @@ import './style/game.css'
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import CloseButton from 'react-bootstrap/CloseButton';
+import React, { useState } from 'react'
 
 export default function Game() {
     const [show, setShow] = useState(false);
@@ -21,7 +22,8 @@ export default function Game() {
         </section>
 
         <Modal show={show} onHide={handleClose} id="staticBackdrop">
-            <Modal.Header CloseButton>
+            <Modal.Header>
+                <CloseButton variant="white" onClick={handleClose} aria-label="Close"/>
                 <Modal.Title id="menuLabel">game paused</Modal.Title>
             </Modal.Header>
 
