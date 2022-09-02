@@ -1,5 +1,4 @@
 :root {
-    font-family: 'Silkscreen', cursive;
     --background: #05080F;
     /* opal */
     --secondary: #9AC6C5;
@@ -24,8 +23,9 @@ body {
     font-family: 'Silkscreen', cursive;
 }
 
-#journey {
-    font-family: 'Silkscreen', cursive;
+
+#newBtn {
+    margin-top: 2rem;
 }
 
 .btn {
