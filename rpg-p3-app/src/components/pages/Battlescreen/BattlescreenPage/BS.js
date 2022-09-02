@@ -19,9 +19,15 @@ export default function Battlescreen (){
     );
 }
     
+    <section id = "playerIcon">
         <section className = "float-left">
-            <img src = {require('../rpg-p3-app/imgs/PlaceholderPlayer1').default} height={200} width ={200}/>
+            <img className = "rounded" src = {require('../rpg-p3-app/imgs/PlaceholderPlayer1').default} height={200} width ={200}/>
                 <p>Player 1</p>
+        </section>
+    </section>,
+
+        <section id = "enemyIcon">
+            <section className = "roundedCircle" src = {require('/imgs/PlaceholderPlayer2').default} height = {400} width = {400} />
         </section>
 
 
