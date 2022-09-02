@@ -1,5 +1,4 @@
 :root {
-    font-family: 'Silkscreen', cursive;
     --background: #05080F;
     /* opal */
     --secondary: #9AC6C5;
@@ -16,12 +15,17 @@
 
 }
 
+* {
+    font-family: 'Silkscreen', sans-serif;
+    color: white;
+}
+
 body {
     background-color: var(--background);
 }
 
-#welcome {
-    font-family: 'Silkscreen', cursive;
+#pageCon {
+    height: 100vh;
 }
 
 .btn {

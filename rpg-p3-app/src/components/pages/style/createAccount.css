@@ -1,5 +1,4 @@
 :root {
-    font-family: 'Silkscreen', cursive;
     --background: #05080F;
     /* opal */
     --secondary: #9AC6C5;
@@ -16,11 +15,74 @@
 
 }
 
+* {
+    font-family: 'Silkscreen', sans-serif;
+    color: white;
+}
+
+
 body {
     background-color:var(--background);
 }
 
-#inputCon {
-    font-family: 'Silkscreen', cursive;
+#pageCon {
+    height: 100vh;
+}
 
+#inputCon {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+}
+
+#title {
+    color: white;
+    font-size: 3rem;
+}
+
+#createBtn {
+    margin-top: 2rem;
+}
+
+.inputLabel {
+    margin-bottom: .5rem;
+}
+
+#emailInput {
+    padding: .25rem;
+    color: black;
+    border-radius: 5px;
+    font-size: medium;
+}
+
+#username {
+    padding: .25rem;
+    color: black;
+    border-radius: 5px;
+    font-size: medium;
+}
+
+#userPassword {
+    padding: .25rem;
+    color: black;
+    border-radius: 5px;
+    font-size: medium;
+}
+
+#emailCon {
+    margin-bottom: 1rem;
+}
+
+#userCon {
+    margin-bottom: 1rem;
+}
+
+#passCon {
+    margin-bottom: .5rem;
+}
+
+#toLoginCon {
+    color: white;
 }

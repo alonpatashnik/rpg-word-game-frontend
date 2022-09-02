@@ -21,6 +21,8 @@
 
 #gameContainer {
     background-color: var(--background);
+    display: flex;
+    height: 100vh;
 }
 
 #modalBtn {
@@ -30,7 +32,6 @@
 
 .modal-title {
     text-align: center;
-    padding-left: 2rem;
 }
 
 .modal-content {
@@ -45,6 +46,51 @@
     text-align: center;
 }
 
+#closeBtn {
+    padding: 5px;
+    margin: 1rem;
+}
+
+#closeBtn:hover{
+    cursor: pointer;
+}
+
+#modalHome {
+    text-decoration: none;
+}
+
+#modalBtn {
+    padding: .5rem;
+    justify-self: flex-end;
+}
+
+#modalBtn:hover {
+    cursor: pointer;
+}
+/* the modal container */
+#staticBackdrop {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    /* margin-bottom: 6rem; */
+    /* border-radius: 10px !important; */
+}
+
+#modalHead {
+    margin-bottom: 2rem;
+    margin-top: .5rem;
+    justify-content: center;
+}
+#menuLabel {
+    /* padding-left: 7rem; */
+    color: white;
+    font-size: 3rem;
+}
+
+#menuGroup {
+    display: flex;
+    flex-direction: column;
+}
 /* .list-group-item :hover{
     background-color: var(--shadowMute) !important;
     color: var(--light) !important;

@@ -94,9 +94,10 @@ export default function MainWindow() {
 
 
   return (
+    // <section id='pageCon' style="height: 100vh">
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Title />}></Route>
+        <Route exact path="/" element={<Title />}></Route>
         <Route path="/Home" element={<Home />}></Route>
         <Route path="/Login" element={<Login submitLoginHandler={submitLoginHandler}/>}></Route>
         <Route path="/SignUp" element={<CreateAccount submitSignUpHandler={submitSignUpHandler}/>}></Route>
@@ -105,6 +106,8 @@ export default function MainWindow() {
         <Route path="/game" element={<Game />}></Route>
       </Routes>
     </BrowserRouter>
+    // </section>
+
   );
   // where do i set current page???
   // i don't remember the exact layout that was used here....
