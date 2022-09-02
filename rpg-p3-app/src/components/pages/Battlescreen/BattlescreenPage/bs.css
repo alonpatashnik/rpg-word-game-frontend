@@ -1,4 +1,9 @@
+* {
+    border-radius: border-box;
+}
+
 /* Timer */
+
 h1 {
     font-family: "Silkscreen";
     text-align: center;
@@ -31,3 +36,10 @@ h1 {
     text-align: center;
     font-size: 16px;
   }
+
+
+/* Enemy */
+#roundedCircle {
+    justify-content: center;
+    align-items: center;
+}

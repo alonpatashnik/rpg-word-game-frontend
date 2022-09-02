@@ -2,6 +2,7 @@ import './bs.css';
 import Form from 'react-bootstrap/Form';
 import Image from 'react-bootstrap/Image';
 import ProgressBar from 'react-bootstrap/ProgressBar';
+// import { CountdownCircleTimer } from 'react-countdown-circle-timer';
 
 
 export default function Battlescreen (){
@@ -18,9 +19,8 @@ export default function Battlescreen (){
         <Form.Text id= "attackText" muted>
             Get Ready to Attack!!!
         </Form.Text>
-        </>
-    );
-}
+        </>,
+
     
     <section id = "playerIcon">
         <section className = "float-left">
@@ -39,5 +39,17 @@ export default function Battlescreen (){
                 <ProgressBar animated now = {100} ></ProgressBar>
         </section>
     </section>
+
+        // <section className="timer">
+        //     <section className="text">Remaining Time:</section>
+        // <section className="value">{formatRemainingTime(remainingTime)}</section>
+        // </section>,
+
+        // <section className="time-wrapper">
+        //     <CountdownCircleTimer> is playing duration {300} colors = {["9CC69B"]} onComplete={() => [true, 1000]} {renderTime} </CountdownCircleTimer>
+        // </section>,
+        //     <p className="info"> Change component properties in the code filed on the right to try difference functionalities.</p>
+
+    )};
 
 
