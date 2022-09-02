@@ -14,13 +14,13 @@ export default function Login() {
                     </p>
                 </section>
                 <Form.Group className="row mb-2">
-                    <Form.Label for="emailInput" className="col-sm-2 col-form-label text-white text-end">Email</Form.Label>
+                    <Form.Label for="formEmailLogin" className="col-sm-2 col-form-label text-white text-end">Email</Form.Label>
                     <section className="col-sm-10">
                         <Form.Control type="email" controlId="formEmailLogin" className="form-control"/>
                     </section>
                 </Form.Group>
                 <Form.Group className="row mb-2">
-                    <Form.Label for="inputPassword" className="col-sm-2 col-form-label text-white text-end">Password</Form.Label>
+                    <Form.Label for="formPasswordLogin" className="col-sm-2 col-form-label text-white text-end">Password</Form.Label>
                     <section className="col-sm-10">
                         <Form.Control type="password" controlId="formPasswordLogin" className="form-control"/>
                     </section>
@@ -28,9 +28,12 @@ export default function Login() {
                 <Form.Group className="form-check form-check-reverse">
                     <Form.Check className="form-check-input" controlId="formShowCheck" type="checkbox" label="Show Password" id="showPass"/>
                 </Form.Group>
-                <Button type='submit'>
-                    Login
-                </Button>
+                <Form.Group>
+                    {/* do I need to do my link thing here? or will the routing via javascript for logging in do that */}
+                    <Button type='submit'>
+                        Login
+                    </Button>
+                </Form.Group>
                 <Form.Group>
                     <p className="text-white text-center">
                         Don't have an account? Sign up here.
