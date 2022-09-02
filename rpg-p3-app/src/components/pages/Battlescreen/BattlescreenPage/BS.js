@@ -6,6 +6,7 @@ export default function Battlescreen (){
         <section id="battlescreenWindow"></section>,
 
             //gotta think of something quippy for this~
+            //I also don't know if we'd rather the Form Vs an Input grouping?? just let me know, ig!!
         <>
         <Form.Label for = "attackBox">Placeholder text</Form.Label>
         <Form.Control
