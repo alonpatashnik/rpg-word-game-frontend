@@ -12,7 +12,7 @@ export default function Battlescreen (){
             //gotta think of something quippy for this~
             //I also don't know if we'd rather the Form Vs an Input grouping?? just let me know, ig!!
         <>
-        <Form.Label for = "attackBox">Placeholder text</Form.Label>
+        <Form.Label id = "attackBox" for = "attackBox">Placeholder text</Form.Label>
         <Form.Control
             type= "text"
         />
