@@ -3,7 +3,7 @@ import './style/home.css'
 import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom';
 
-export default function Home() {
+function Home() {
     return (
     <section className="text-center vh-100">
         <section className="h-100" id="contentCon">
@@ -25,3 +25,5 @@ export default function Home() {
 
     )
 }
+
+export default Home;
