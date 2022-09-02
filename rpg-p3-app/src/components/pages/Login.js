@@ -2,12 +2,21 @@ import './style/login.css'
 // import 'url("https://fonts.googleapis.com/css2?family=Silkscreen&display=swap")'
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
+import { useState } from 'react'
 
 
-export default function Login() {
+export default function Login(submitLoginHandler) {
+
+    const [emailEl, setEmailEl] = useState('')
+    const [inputEl, setInputEl] = useState('')
+
+    const userEmail = document.getElementById('emailInput').value
+    const userPassword = document.getElementById('passwordInput').value
+
+
     return (
         <section className="m-4 justify-content-center">
-            <Form id="inputCon">
+            <Form id="inputCon" onSubmit={() => submitLoginHandler(userEmail, userPassword)}>
                 <section>
                     <p className="text-white text-center fs-2">
                     Login 
@@ -16,13 +25,13 @@ export default function Login() {
                 <Form.Group className="row mb-2">
                     <Form.Label for="formEmailLogin" className="col-sm-2 col-form-label text-white text-end">Email</Form.Label>
                     <section className="col-sm-10">
-                        <Form.Control type="email" controlId="formEmailLogin" className="form-control"/>
+                        <Form.Control type="email" value={emailEl} controlId="formEmailLogin" className="form-control" id={userEmail} onChange={setEmailEl(userEmail)}/>
                     </section>
                 </Form.Group>
                 <Form.Group className="row mb-2">
                     <Form.Label for="formPasswordLogin" className="col-sm-2 col-form-label text-white text-end">Password</Form.Label>
                     <section className="col-sm-10">
-                        <Form.Control type="password" controlId="formPasswordLogin" className="form-control"/>
+                        <Form.Control type="password" value={inputEl} controlId="formPasswordLogin" className="form-control" id={userPassword} onChange={setInputEl(userPassword)}/>
                     </section>
                 </Form.Group>
                 <Form.Group className="form-check form-check-reverse">

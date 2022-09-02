@@ -3,12 +3,12 @@ import './style/LoginHome.css'
 import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom';
 
-export default function LoginHome() {
+export default function LoginHome({user}) {
     // fetch request here, authorization option with token on localstore
     return (
     <section className="text-center vh-100">
         <section className="h-100" id="contentCon">
-            <p className="text-wrap text-white fs-1 mb-5" id="welcome">Welcome back, @username</p>
+            <p className="text-wrap text-white fs-1 mb-5" id="welcome">Welcome back, {user.username}</p>
             <Link to='/game'>
                 <Button type="button" id="newBtn" className="btn text-light p-3 w-25 align-self-center mb-5">
                     New Adventure
