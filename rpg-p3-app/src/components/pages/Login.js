@@ -1,39 +1,54 @@
-import './style/login'
-import 'url("https://fonts.googleapis.com/css2?family=Silkscreen&display=swap")'
+import './style/login.css'
+// import 'url("https://fonts.googleapis.com/css2?family=Silkscreen&display=swap")'
+import Form from 'react-bootstrap/Form'
+import Button from 'react-bootstrap/Button'
+import { useState } from 'react'
 
-export default function Login() {
+
+export default function Login(submitLoginHandler) {
+
+    const [emailEl, setEmailEl] = useState('')
+    const [inputEl, setInputEl] = useState('')
+
+    const userEmail = document.getElementById('emailInput').value
+    const userPassword = document.getElementById('passwordInput').value
+
+
     return (
         <section className="m-4 justify-content-center">
-            <form id="inputCon">
+            <Form id="inputCon" onSubmit={() => submitLoginHandler(userEmail, userPassword)}>
                 <section>
                     <p className="text-white text-center fs-2">
                     Login 
                     </p>
                 </section>
-                <section className="row mb-2">
-                    <label for="emailInput" className="col-sm-2 col-form-label text-white text-end">Email</label>
+                <Form.Group className="row mb-2">
+                    <Form.Label for="formEmailLogin" className="col-sm-2 col-form-label text-white text-end">Email</Form.Label>
                     <section className="col-sm-10">
-                        <input type="email" className="form-control"/>
+                        <Form.Control type="email" value={emailEl} controlId="formEmailLogin" className="form-control" id={userEmail} onChange={setEmailEl(userEmail)}/>
                     </section>
-                </section>
-                <section className="row mb-2">
-                    <label for="inputPassword" className="col-sm-2 col-form-label text-white text-end">Password</label>
+                </Form.Group>
+                <Form.Group className="row mb-2">
+                    <Form.Label for="formPasswordLogin" className="col-sm-2 col-form-label text-white text-end">Password</Form.Label>
                     <section className="col-sm-10">
-                        <input type="password" className="form-control"/>
+                        <Form.Control type="password" value={inputEl} controlId="formPasswordLogin" className="form-control" id={userPassword} onChange={setInputEl(userPassword)}/>
                     </section>
-                </section>
-                <section className="form-check form-check-reverse">
-                    <input className="form-check-input" type="checkbox" value="" id="showPass"/>
-                    <label className="form-check-label text-white" for="showPass">
-                        Show Password
-                    </label>
-                </section>
-                <section>
+                </Form.Group>
+                <Form.Group className="form-check form-check-reverse">
+                    <Form.Check className="form-check-input" controlId="formShowCheck" type="checkbox" label="Show Password" id="showPass"/>
+                </Form.Group>
+                <Form.Group>
+                    {/* do I need to do my link thing here? or will the routing via javascript for logging in do that */}
+                    <Button type='submit'>
+                        Login
+                    </Button>
+                </Form.Group>
+                <Form.Group>
                     <p className="text-white text-center">
                         Don't have an account? Sign up here.
                     </p>
-                </section>
-            </form>
+                </Form.Group>
+            </Form>
         </section>
     )
 }
