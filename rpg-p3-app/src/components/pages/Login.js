@@ -5,18 +5,19 @@ import Button from 'react-bootstrap/Button'
 import { useState } from 'react'
 
 
-export default function Login(submitLoginHandler) {
+export default function Login({submitLoginHandler}) {
 
     const [emailEl, setEmailEl] = useState('')
     const [inputEl, setInputEl] = useState('')
 
-    const userEmail = document.getElementById('emailInput').value
-    const userPassword = document.getElementById('passwordInput').value
-
+    const submit = (e) => {
+        e.preventDefault();
+        submitLoginHandler(emailEl, inputEl)
+    }
 
     return (
         <section className="m-4 justify-content-center">
-            <Form id="inputCon" onSubmit={() => submitLoginHandler(userEmail, userPassword)}>
+            <Form id="inputCon" onSubmit={submit}>
                 <section>
                     <p className="text-white text-center fs-2">
                     Login 
@@ -25,13 +26,13 @@ export default function Login(submitLoginHandler) {
                 <Form.Group className="row mb-2">
                     <Form.Label for="formEmailLogin" className="col-sm-2 col-form-label text-white text-end">Email</Form.Label>
                     <section className="col-sm-10">
-                        <Form.Control type="email" value={emailEl} controlId="formEmailLogin" className="form-control" id={userEmail} onChange={setEmailEl(userEmail)}/>
+                        <Form.Control type="email" value={emailEl} controlId="formEmailLogin" className="form-control" onChange={(e) => setEmailEl(e.target.value)}/>
                     </section>
                 </Form.Group>
                 <Form.Group className="row mb-2">
                     <Form.Label for="formPasswordLogin" className="col-sm-2 col-form-label text-white text-end">Password</Form.Label>
                     <section className="col-sm-10">
-                        <Form.Control type="password" value={inputEl} controlId="formPasswordLogin" className="form-control" id={userPassword} onChange={setInputEl(userPassword)}/>
+                        <Form.Control type="password" value={inputEl} controlId="formPasswordLogin" className="form-control" onChange={(e) => setInputEl(e.target.value)}/>
                     </section>
                 </Form.Group>
                 <Form.Group className="form-check form-check-reverse">
