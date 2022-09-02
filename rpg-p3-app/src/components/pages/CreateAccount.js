@@ -1,46 +1,51 @@
-import './style/createAccount'
-import 'url("https://fonts.googleapis.com/css2?family=Silkscreen&display=swap")'
+import './style/createAccount.css'
+
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
 
 
 export default function CreateAccount() {
     return (
         <section className="m-4 justify-content-center">
-            <form id="inputCon">
+            <Form id="inputCon">
                 <section>
                     <p className="text-white text-center fs-2">
                     Create Account 
                     </p>
                 </section>
-                <section className="row mb-2">
-                    <label for="emailInput" class="col-sm-2 col-form-label text-white text-end">Email</label>
+                <Form.Group className="row mb-2">
+                    <Form.Label for="emailInput" class="col-sm-2 col-form-label text-white text-end">Email</Form.Label>
                     <section className="col-sm-10">
-                        <input type="email" class="form-control"/>
+                        <Form.Control type="email" controlId="emailInput"class="form-control"/>
                     </section>
-                </section>
-                <section className="row mb-2">
-                    <label for="inputUsername" class="col-sm-2 col-form-label text-white text-end">Username</label>
+                </Form.Group>
+                <Form.Group className="row mb-2">
+                    <Form.Label for="inputUsername" class="col-sm-2 col-form-label text-white text-end">Username</Form.Label>
                     <section className="col-sm-10">
-                        <input type="text" class="form-control"/>
+                        <Form.Control controlId="inputUsername" type="text" class="form-control"/>
                     </section>
-                </section>
-                <section className="row mb-2">
-                    <label for="inputPassword" class="col-sm-2 col-form-label text-white text-end">Password</label>
+                </Form.Group>
+                <Form.Group className="row mb-2">
+                    <Form.Label for="inputPassword" class="col-sm-2 col-form-label text-white text-end">Password</Form.Label>
                     <section className="col-sm-10">
-                        <input type="password" class="form-control"/>
+                        <Form.Control controlId="inputPassword"type="password" class="form-control"/>
                     </section>
-                </section>
-                <section className="form-check form-check-reverse">
-                    <input className="form-check-input" type="checkbox" value="" id="showPass"/>
-                    <label className="form-check-label" for="showPass">
-                        Show Password
-                    </label>
-                </section>
-                <section>
+                </Form.Group>
+                <Form.Group className="form-check form-check-reverse">
+                    <Form.Check className="form-check-input" type="checkbox" label="Show Password" controlId="formShowPass" id="showPass"/>
+                </Form.Group>
+                <Form.Group>
+                    {/* do we need to do my link thing here? or will the routing via javscript for logging in do that? */}
+                    <Button type="submit">
+                        Create Account
+                    </Button>
+                </Form.Group>
+                <Form.Group>
                     <p className="text-white text-center">
                         Already have an account? Login here.
                     </p>
-                </section>
-            </form>
+                </Form.Group>
+            </Form>
         </section>
     )
 }
