@@ -1,5 +1,8 @@
 import './bs.css';
 import Form from 'react-bootstrap/Form';
+import Image from 'react-bootstrap/Image';
+import ProgressBar from 'react-bootstrap/ProgressBar';
+
 
 export default function Battlescreen (){
     return (
@@ -28,6 +31,13 @@ export default function Battlescreen (){
 
         <section id = "enemyIcon">
             <section className = "roundedCircle" src = {require('/imgs/PlaceholderPlayer2').default} height = {400} width = {400} />
+        </section>,
+
+    <section id = "hpBar">
+        <section>
+            <ProgressBar stripped variant = "danger" now = {100} ></ProgressBar>
+                <ProgressBar animated now = {100} ></ProgressBar>
         </section>
+    </section>
 
 
