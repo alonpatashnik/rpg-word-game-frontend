@@ -5,40 +5,41 @@ import Form from 'react-bootstrap/Form';
 import { useState } from 'react';
 
 
-export default function CreateAccount(submitSignUpHandler) {
+export default function CreateAccount({submitSignUpHandler}) {
 
     const [emailEl, setEmailEl] = useState('')
     const [userEl, setUserEl] = useState('')
     const [inputEl, setInputEl] = useState('')
 
-    const userEmail = document.getElementById('emailInput').value
-    const username = document.getElementById('username')
-    const userPassword = document.getElementById('passwordInput').value
+    const submit = e=>{
+        e.preventDefault()
+        submitSignUpHandler(emailEl, userEl, inputEl)
+    }
 
     return (
         <section className="m-4 justify-content-center">
-            <Form id="inputCon" onSubmit={() => submitSignUpHandler(userEmail, username, userPassword)}>
+            <Form id="inputCon" onSubmit={submit}>
                 <section>
                     <p className="text-white text-center fs-2">
                     Create Account 
                     </p>
                 </section>
                 <Form.Group className="row mb-2">
-                    <Form.Label for="emailInput" className="col-sm-2 col-form-label text-white text-end">Email</Form.Label>
+                    <Form.Label for="emailInput" class="col-sm-2 col-form-label text-white text-end">Email</Form.Label>
                     <section className="col-sm-10">
-                        <Form.Control type="email" controlId="emailInput" className="form-control" value={emailEl} id="emailInput" onChange={setEmailEl(userEmail)}/>
+                        <Form.Control type="email" value={emailEl} controlId="emailInput"class="form-control" id="emailInput" onChange={e=>setEmailEl(e.target.value)}/>
                     </section>
                 </Form.Group>
                 <Form.Group className="row mb-2">
-                    <Form.Label for="inputUsername" className="col-sm-2 col-form-label text-white text-end">Username</Form.Label>
+                    <Form.Label for="inputUsername" class="col-sm-2 col-form-label text-white text-end">Username</Form.Label>
                     <section className="col-sm-10">
-                        <Form.Control controlId="inputUsername" value={userEl} type="text" class="form-control" id="username" onChange={setUserEl(username)}/>
+                        <Form.Control controlId="inputUsername" value={userEl} type="text" class="form-control" id="username" onChange={e=>setUserEl(e.target.value)}/>
                     </section>
                 </Form.Group>
                 <Form.Group className="row mb-2">
-                    <Form.Label for="inputPassword" className="col-sm-2 col-form-label text-white text-end">Password</Form.Label>
+                    <Form.Label for="inputPassword" class="col-sm-2 col-form-label text-white text-end">Password</Form.Label>
                     <section className="col-sm-10">
-                        <Form.Control controlId="inputPassword" type="password" value={inputEl} class="form-control" id="userPassword" onChange={setInputEl(userPassword)}/>
+                        <Form.Control controlId="inputPassword" value={inputEl} type="password" class="form-control" id="userPassword" onChange={e=>setInputEl(e.target.value)}/>
                     </section>
                 </Form.Group>
                 <Form.Group className="form-check form-check-reverse">
