@@ -1,3 +1,9 @@
+* {
+    border-radius: border-box;
+}
+
+/* Timer */
+
 h1 {
     font-family: "Silkscreen";
     text-align: center;
@@ -30,4 +36,20 @@ h1 {
     text-align: center;
     font-size: 16px;
   }
-  
+
+/* AttackBox */
+#attackBox, #attackText{
+    justify-content: center;
+    align-items: center;
+}
+
+/* Enemy */
+.roundedCircle {
+    justify-content: center;
+    align-items: center;
+}
+
+.hpBar {
+    justify-content: center;
+    align-items: center;
+}
