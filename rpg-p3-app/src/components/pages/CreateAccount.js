@@ -2,6 +2,7 @@ import './style/createAccount.css'
 
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import { Link } from 'react-router-dom';
 import { useState } from 'react';
 
 
@@ -53,7 +54,10 @@ export default function CreateAccount({submitSignUpHandler}) {
                 </Form.Group>
                 <Form.Group>
                     <p id="toLoginCon">
-                        Already have an account? Login here.
+                        Already have an account? Login 
+                        <Link to='/Login'>
+                            <Button id="linkBtn" variant="link">here</Button>.
+                        </Link>
                     </p>
                 </Form.Group>
             </Form>

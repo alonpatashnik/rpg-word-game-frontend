@@ -3,6 +3,7 @@ import './style/login.css'
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 
 export default function Login({submitLoginHandler}) {
@@ -46,7 +47,10 @@ export default function Login({submitLoginHandler}) {
                 </Form.Group>
                 <Form.Group>
                     <p className="text-white text-center">
-                        Don't have an account? Sign up here.
+                        Don't have an account? Sign up 
+                        <Link to='/SignUp'>
+                            <Button id="linkBtn" variant="link">here</Button>.
+                        </Link>
                     </p>
                 </Form.Group>
             </Form>
