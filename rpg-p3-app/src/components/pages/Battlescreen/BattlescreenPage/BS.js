@@ -1,3 +1,5 @@
+// I WANT TO KEEP THIS PAGE EVEN THO IT IS ALL COMMENTED OUT, JUST IN CASE MY IDEA DOESN'T WORK FOR SOME REASON
+
 // import './bs.css';
 // import Form from 'react-bootstrap/Form';
 // import Image from 'react-bootstrap/Image';
@@ -20,7 +22,6 @@
 //             Get Ready to Attack!!!
 //         </Form.Text>
 
-    
 //     <section id = "playerIcon">
 //         <section className = "float-left">
 //             <img className = "rounded" src = {require('../rpg-p3-app/imgs/PlaceholderPlayer1').default} height={200} width ={200}/>
