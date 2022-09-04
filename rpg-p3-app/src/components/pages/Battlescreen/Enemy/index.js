@@ -1,8 +1,8 @@
 import '../imgs/PlaceholderPlayer1';
-import 'Enemy.css';
+import './Enemy.css';
 
 export default function Enemy(){
     <section className = "roundedCircle">
-            <img src = {require('../imgs/PlaceholderPlayer1')}/>
+            <img src = {require('../imgs/PlaceholderPlayer1.png')}/>
     </section>
 }

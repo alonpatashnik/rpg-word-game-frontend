@@ -4,7 +4,7 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import CloseButton from 'react-bootstrap/CloseButton';
 import React, { useState } from 'react'
-import Battlescreen from './Battlescreen/BattlescreenPage/BS';
+import Battlescreen from './Battlescreen/BattlescreenPage/BSP';
 // import { Link } from 'react-router-dom';
 
 

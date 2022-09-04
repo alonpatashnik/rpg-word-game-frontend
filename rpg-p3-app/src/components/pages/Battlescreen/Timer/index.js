@@ -33,6 +33,7 @@ function Timer() {
         <p className="info"> Change component properties in the code filed on the right to try difference functionalities.</p>
 
     )};
-    
+
+    export default Timer;
     // const rootElement = document.getElementById("root");
     //     ReactDOM.render(<App />, rootElement);
