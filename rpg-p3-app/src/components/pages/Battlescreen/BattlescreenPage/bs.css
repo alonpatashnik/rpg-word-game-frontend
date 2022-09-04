@@ -4,52 +4,9 @@
 
 /* Timer */
 
-h1 {
-    font-family: "Silkscreen";
-    text-align: center;
-    margin-bottom: 40px;
-  }
-  
-  .timer-wrapper {
-    display: flex;
-    justify-content: center;
-  }
-  
-  .timer {
-    font-family: "Silkscreen";
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .text {
-    color: #aaa;
-  }
-  
-  .value {
-    font-size: 40px;
-  }
-  
-  .info {
-    max-width: 360px;
-    margin: 40px auto 0;
-    text-align: center;
-    font-size: 16px;
-  }
-
 /* AttackBox */
-#attackBox, #attackText{
-    justify-content: center;
-    align-items: center;
-}
+
 
 /* Enemy */
-.roundedCircle {
-    justify-content: center;
-    align-items: center;
-}
 
-.hpBar {
-    justify-content: center;
-    align-items: center;
-}
+
