@@ -16,7 +16,7 @@ function Battlescreen(){
             <div className='bs'>
                 <Routes>
                     <Route path="/" element={<GameWindow/>} />
-                    <Route path="/AttackBar" element={<AttackBar/>} />
+                    <Route path="AttackBar" element={<AttackBar/>} />
                     <Route path="/Avatar" element={<Avatar/>} />
                     <Route path="/Enemy" element={<Enemy/>} />
                     <Route path="/ProgessBar" element={<ProgressBar/>} />
