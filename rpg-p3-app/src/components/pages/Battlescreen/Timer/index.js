@@ -1,8 +1,8 @@
 import React from 'react';
-import ReactDom from 'react-dom';
+// import ReactDom from 'react-dom';
 import { CountdownCircleTimer } from 'react-countdown-circle-timer';
 
-import './timer.css';
+import './Timer.css';
 
 const formatRemainingTime = time => {
     const minutes = Math.floor((time % 300) / 60);
@@ -34,7 +34,5 @@ function Timer() {
 
     )};
     
-    const rootElement = document.getElementById("root");
-        ReactDOM.render(<App />, rootElement);
-
-        //adding a comment line so it will let me push because this is being sillllly right now, and my other push request just ??? disappeared for no reason at all???
+    // const rootElement = document.getElementById("root");
+    //     ReactDOM.render(<App />, rootElement);
