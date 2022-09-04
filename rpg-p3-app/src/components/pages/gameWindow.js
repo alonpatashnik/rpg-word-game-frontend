@@ -4,7 +4,7 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import CloseButton from 'react-bootstrap/CloseButton';
 import React, { useState } from 'react'
-import Battlescreen from './Battlescreen/BattlescreenPage/BSP';
+import Battlescreen from './Battlescreen/BattlescreenPage/BSP.js';
 // import { Link } from 'react-router-dom';
 
 
@@ -36,8 +36,6 @@ export default function Game() {
                                 Home
                             </Button>
 
-
-
                             <Button type="button" className="list-group-item list-group-item-action">
                                 Logout
                             </Button>
@@ -49,14 +47,13 @@ export default function Game() {
                         </section>
             </Modal.Body>
         </Modal>
-    <section id="gameContainer" className="vh-100 text-white">
-        
-        
 
+    <section id="gameContainer" className="vh-100 text-white">
         
         <Button  onClick={handleShow} type="button" id="modalBtn" className="btn border border-0 text-white" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                 Pause
         </Button>
+
         <section className='battleScrnCon'>
             <Battlescreen className="battleScrn" />
         </section>
