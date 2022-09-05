@@ -1,5 +1,5 @@
 import React from 'react';
-
+import '../../style/bs.css'
 // import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 
@@ -15,9 +15,10 @@ function Battlescreen(){
         return (
             // <Router>
             <section className='bs'>
-                <AttackBar />
+                
                 <Avatar />
                 <Enemy />
+                <AttackBar />
                 <ProgressBar />
                 {/* <Timer /> */}
                 {/* <Routes> */}
