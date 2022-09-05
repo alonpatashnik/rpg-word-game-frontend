@@ -11,9 +11,9 @@ export default function Login({submitLoginHandler}) {
     const [emailEl, setEmailEl] = useState('')
     const [inputEl, setInputEl] = useState('')
 
-    const submit = (e) => {
-        e.preventDefault();
-        submitLoginHandler(emailEl, inputEl)
+    const submit = async(e) => {
+        await e.preventDefault();
+        await submitLoginHandler(emailEl, inputEl)
     }
 
     return (
