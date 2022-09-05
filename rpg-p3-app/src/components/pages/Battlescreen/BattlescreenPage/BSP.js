@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 
 //all files 
+// import Game from '../../gameWindow'
 import AttackBar from '../AttackBar'
 import Avatar from '../Avatar'
 import Enemy from '../Enemy'
@@ -15,13 +16,13 @@ function Battlescreen(){
             <Router>
             <div className='bs'>
                 <Routes>
-                    <Route path="/" element={<GameWindow/>} />
+                    {/* <Route path="/" element={<Game/>} /> */}
                     <Route path="AttackBar" element={<AttackBar/>} />
                     <Route path="/Avatar" element={<Avatar/>} />
                     <Route path="/Enemy" element={<Enemy/>} />
                     <Route path="/ProgessBar" element={<ProgressBar/>} />
                     <Route path="/Timer" element = {<Timer/>} />
-                    <Route path="*" element = {<GameWindow/>}/>
+                    {/* <Route path="*" element = {<Game/>}/> */}
                 </Routes>
             </div>
         </Router>
