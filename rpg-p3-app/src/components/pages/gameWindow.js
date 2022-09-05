@@ -1,5 +1,6 @@
 // game window will then hold the entirety of the game, so no more pages after this one.
 import './style/game.css'
+import './style/bs.css'
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import CloseButton from 'react-bootstrap/CloseButton';

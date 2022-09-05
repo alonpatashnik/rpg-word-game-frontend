@@ -1,0 +1,18 @@
+* {
+    border-radius: border-box;
+}
+
+#attackBox, #attackText{
+    justify-content: center;
+    align-items: center;
+    background-color: #394F49;
+}
+
+/* Timer */
+
+/* AttackBox */
+
+
+/* Enemy */
+
+

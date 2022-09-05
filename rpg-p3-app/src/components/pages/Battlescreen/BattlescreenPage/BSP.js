@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+// import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 
 //all files 
@@ -9,29 +9,27 @@ import AttackBar from '../AttackBar'
 import Avatar from '../Avatar'
 import Enemy from '../Enemy'
 import ProgressBar from '../ProgressBar'
-import Timer from '../Timer'
+// import Timer from '../Timer'
 
 function Battlescreen(){
         return (
-
-            <div>
-                <AttackBar/>
-                <Avatar/>
-                <Enemy/>
-                <ProgressBar/>
-            </div>
-        //     <Router>
-        //     <div className='bs'>
-        //         <Routes>
-        //             {/* <Route path="/" element={<Game/>} /> */}
-        //             <Route path="AttackBar" element={<AttackBar/>} />
-        //             <Route path="/Avatar" element={<Avatar/>} />
-        //             <Route path="/Enemy" element={<Enemy/>} />
-        //             <Route path="/ProgessBar" element={<ProgressBar/>} />
-        //             <Route path="/Timer" element = {<Timer/>} />
-        //             {/* <Route path="*" element = {<Game/>}/> */}
-        //         </Routes>
-        //     </div>
+            // <Router>
+            <section className='bs'>
+                <AttackBar />
+                <Avatar />
+                <Enemy />
+                <ProgressBar />
+                {/* <Timer /> */}
+                {/* <Routes> */}
+                    {/* <Route path="/" element={<Game/>} /> */}
+                    {/* <Route path="AttackBar" element={<AttackBar/>} />
+                    <Route path="/Avatar" element={<Avatar/>} />
+                    <Route path="/Enemy" element={<Enemy/>} />
+                    <Route path="/ProgessBar" element={<ProgressBar/>} />
+                    <Route path="/Timer" element = {<Timer/>} /> */}
+                    {/* <Route path="*" element = {<Game/>}/> */}
+                {/* </Routes> */}
+            </section>
         // </Router>
         )
     }
