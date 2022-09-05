@@ -13,19 +13,24 @@ import Timer from '../Timer'
 
 function Battlescreen(){
         return (
-            <Router>
-            <div className='bs'>
-                <Routes>
+            // <Router>
+            <section className='bs'>
+                <AttackBar />
+                <Avatar />
+                <Enemy />
+                <ProgressBar />
+                {/* <Timer /> */}
+                {/* <Routes> */}
                     {/* <Route path="/" element={<Game/>} /> */}
-                    <Route path="AttackBar" element={<AttackBar/>} />
+                    {/* <Route path="AttackBar" element={<AttackBar/>} />
                     <Route path="/Avatar" element={<Avatar/>} />
                     <Route path="/Enemy" element={<Enemy/>} />
                     <Route path="/ProgessBar" element={<ProgressBar/>} />
-                    <Route path="/Timer" element = {<Timer/>} />
+                    <Route path="/Timer" element = {<Timer/>} /> */}
                     {/* <Route path="*" element = {<Game/>}/> */}
-                </Routes>
-            </div>
-        </Router>
+                {/* </Routes> */}
+            </section>
+        // </Router>
         )
     }
 

@@ -49,7 +49,7 @@ export default function Login({submitLoginHandler}) {
                     <p className="text-white text-center">
                         Don't have an account? Sign up 
                         <Link to='/SignUp'>
-                            <Button id="linkBtn" variant="link">here</Button>.
+                            <Button id="linkBtn" variant="link">here</Button>
                         </Link>
                     </p>
                 </Form.Group>
