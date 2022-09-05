@@ -13,104 +13,125 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 // do i need to also have gamewindow a thing from here???
 
 export default function MainWindow() {
-  const [user, setUser] = useState({});
-  const [token, setToken] = useState("");
+  const [user, setUser] = useState({
+    id: 0,
+    email: '',
+    username: ''
+  });
 
   useEffect(() => {
-    const storedToken = localStorage.getItem("token");
-    if (!user) {
-      window.location.replace("/Login");
-    }
 
-    fetch("https://rpg-p3-db.herokuapp.com/api/check-token", {
+    const storedToken = localStorage.getItem("token");
+
+    fetch("https://rpg-p3-db.herokuapp.com/api/users/check-token", {
       method: "GET",
       headers: {
         authorization: `Bearer ${storedToken}`,
       },
     }).then((data) => {
       if (!data.ok) {
-        console.log("invalid token!");
         localStorage.removeItem("token");
       } else {
-        console.log("valid token");
         data.json().then((newData) => {
-          setToken(storedToken);
+            console.log(newData)
           setUser({
             id: newData.id,
             email: newData.email,
+            username: newData.username
           });
         });
-        window.location.replace('/Dashboard')
       }
     });
-  });
+  }, []);
 
 
   const submitLoginHandler = (email, password) => {
     fetch('https://rpg-p3-db.herokuapp.com/api/users/login', {
             method: "POST",
-            body: {
+            body: JSON.stringify({
                 email: email,
                 password: password
+            }),
+            headers:{
+                "Content-Type":"application/json"
             }
-        }).then((data) => {
-            if (data) {
+        }).then((data) => data.json()).then((res)=> {
+            console.log(res)
+            if (res) {
                 setUser({
-                    id: data.user.id,
-                    email: data.user.email
+                    id: res.user.id,
+                    email: res.user.email,
+                    username: res.user.username
                 })
-                setToken(data.token)
-                localStorage.setItem('token', data.token)
+                localStorage.setItem('token', res.token)
+            }
+
+            return res.token
+        }).then((data) => {
+            if (localStorage.getItem('token') === data) {
+                window.location.replace('/Dashboard')
             }
         })
-
-    window.location.replace('/Dashboard')
-    
   }
 
-  const submitSignUpHandler = (email, password, username) => {
+  const submitSignUpHandler = (email, username, password) => {
+    console.log(email)
     fetch('https://rpg-p3-db.herokuapp.com/api/users/signup', {
             method: "POST",
-            body: {
+            body: JSON.stringify({
                 email: email,
                 username: username,
                 password: password
+            }),
+            headers:{
+                "Content-Type":"application/json"
             }
-        }).then((data) => {
-            if (data) {
+        }).then((data) => data.json()).then((res)=>{
+            console.log(res)
+            if (res) {
                 setUser({
-                    id: data.user.id,
-                    email: data.user.email
+                    id: res.user.id,
+                    email: res.user.email,
+                    username: res.user.username
                 })
-                setToken(data.token)
-                localStorage.setItem('token', data.token)
+                localStorage.setItem('token', res.token)
+                
+            }
+            return res.token
+        }).then((data) => {
+            localStorage.getItem('token')
+            if (localStorage.getItem('token') === data) {
+                window.location.replace('/Dashboard')
             }
         })
 
-        window.location.replace('/Dashboard')
+        // window.location.replace('/Dashboard')
+  }
+
+  const logout = () => {
+    localStorage.removeItem('token')
+    setUser({
+        id: 0,
+        email: '',
+        username: ''
+    })
   }
 
 
-
-
   return (
-    // <section id='pageCon' style="height: 100vh">
     <BrowserRouter>
       <Routes>
-        <Route exact path="/" element={<Title />}></Route>
+        <Route path="/" element={<Title />}></Route>
         <Route path="/Home" element={<Home />}></Route>
         <Route path="/Login" element={<Login submitLoginHandler={submitLoginHandler}/>}></Route>
         <Route path="/SignUp" element={<CreateAccount submitSignUpHandler={submitSignUpHandler}/>}></Route>
         <Route path="/newHome" element={<NewHome />}></Route>
-        <Route path="/Dashboard" element={<LoginHome user={user}/>}></Route>
-        <Route path="/game" element={<Game />}></Route>
+        <Route path="/Dashboard" element={<LoginHome user={user} logout={logout}/>}></Route>
+        <Route path="/game" element={<Game user={user}/>}></Route>
+        {/* <Route path="/FauxGame" element={<FauxGame user={user}/>}></Route> */}
       </Routes>
     </BrowserRouter>
-    // </section>
-
   );
-  // where do i set current page???
-  // i don't remember the exact layout that was used here....
 }
 
 // page change options:
