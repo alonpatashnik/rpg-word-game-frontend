@@ -19,7 +19,14 @@ export default function Game() {
     return (
     <>
 
-    <Modal show={show} onHide={handleClose} id="staticBackdrop">
+ 
+
+    <section id="gameContainer" className="vh-100 text-white">
+        <section id='pauseCon'>
+            <Button  onClick={handleShow} type="button" id="modalBtn" className="btn border border-0 text-white" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    Pause
+            </Button>
+            <Modal show={show} onHide={handleClose} id="staticBackdrop">
             <Modal.Header id="modalHead">
                 <CloseButton id="closeBtn" variant="white" onClick={handleClose} aria-label="Close"/>
                 <Modal.Title id="menuLabel">game paused</Modal.Title>
@@ -28,9 +35,9 @@ export default function Game() {
             <Modal.Body>
                        <section id="menuGroup">
 
-                            <Button type="button" className="list-group-item list-group-item-action">
+                            {/* <Button type="button" className="list-group-item list-group-item-action">
                                 Reload Last CheckPoint
-                            </Button>
+                            </Button> */}
 
                             
                             <Button type="button" id="modalHome" className="list-group-item list-group-item-action">
@@ -49,12 +56,8 @@ export default function Game() {
             </Modal.Body>
         </Modal>
 
-    <section id="gameContainer" className="vh-100 text-white">
-        
-        <Button  onClick={handleShow} type="button" id="modalBtn" className="btn border border-0 text-white" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                Pause
-        </Button>
-
+        </section>
+   
         <section className='battleScrnCon'>
             <Battlescreen className="battleScrn" />
         </section>
