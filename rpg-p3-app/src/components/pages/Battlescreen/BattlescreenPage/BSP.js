@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+// import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 
 //all files 
@@ -9,7 +9,7 @@ import AttackBar from '../AttackBar'
 import Avatar from '../Avatar'
 import Enemy from '../Enemy'
 import ProgressBar from '../ProgressBar'
-import Timer from '../Timer'
+// import Timer from '../Timer'
 
 function Battlescreen(){
         return (
