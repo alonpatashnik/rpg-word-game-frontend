@@ -6,6 +6,7 @@ import CreateAccount from "./pages/CreateAccount";
 import LoginHome from "./pages/LoginHome";
 import NewHome from "./pages/NewHome";
 import Game from "./pages/gameWindow";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { useState, useEffect } from "react";
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";

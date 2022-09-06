@@ -18,31 +18,64 @@
 * {
     border-radius: border-box;
 }
-
-#attackCon {
+.bs {
     display: flex;
     flex-direction: column;
+    width: 100%;
+    height: 100%;
 }
 
+
 #avatarCon {
-    float: left;
+    justify-self: flex-end;
+    /* float: left; */
 }
 
 #playerImage {
-    border-radius: 45%;
+    border-radius: 50%;
     height: 12em;
 }
-#attackBox, #attackText{
+
+#enemyImg {
+    border-radius: 45%;
+}
+
+/* #attackBox, #attackText{
     justify-content: center;
     align-items: center;
     background-color: #394F49;
+} */
+#attackCon {
+    justify-self: flex-end;
+    align-self: center;
+    /* display: flex; */
+    /* flex-direction: column;
+    justify-content: flex-end;
+    align-items: center; */
+    /* background-color: ghostwhite; */
 }
 
-.roundedCircle {
+#attackInput {
+    /* justify-self: flex-end; */
+    padding: .5em;
+    color: black;
+    font-size: medium;
+    border-radius: 5px;
+    text-align: center;
+
+}
+
+#attackInput:focus {
+    border: 2px solid var(--shadowMute);
+    box-shadow:  0px 0px 10px 7px var(--mute);
+    border-color: var(--shadowMute);
+};
+
+/* .roundedCircle {
     justify-content: center;
     align-items: center;
     background-color: ghostwhite;
-}
+} */
 
 .hpBar {
     justify-content: center;

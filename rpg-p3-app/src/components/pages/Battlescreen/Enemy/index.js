@@ -1,8 +1,12 @@
-// import '../imgs/PlaceholderPlayer1';
-import './Enemy.css';
+// import '../../../imgs/PlaceholderPlayer1.png';
+// import './Enemy.css';
 
 export default function Enemy(){
-    <section className = "roundedCircle">
-            <img alt='illustration of the headshot for the playable character' src = {require('../../../imgs/PlaceholderPlayer1.png')}/>
+    return (
+        <section id='enemyCon'>
+        <p>hello</p>
+        <img id="enemyImg" alt='illustration of the headshot for the enemy' src={require('../../../imgs/PlaceholderPlayer1.png')}/>
     </section>
+    )
+
 }
