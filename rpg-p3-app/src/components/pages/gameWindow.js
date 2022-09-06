@@ -38,13 +38,13 @@ export default function Game() {
                                 Reload Last CheckPoint
                             </Button> */}
 
-                                
-                                <Button type="button" id="modalHome" className="list-group-item list-group-item-action">
-                                    <Link to="/Dashboard" id='menuHome'>
-                                        Home
-                                    </Link>
-                                    
-                                </Button>
+                                {/* <Link to="/Dashboard" id='menuHome'> */}
+                                    <Button type="button" id="modalHome" className="list-group-item list-group-item-action">
+                                        <a id='menuHome' href="/Dashboard">
+                                            Home
+                                        </a>  
+                                    </Button>
+                                {/* </Link> */}
 
                                 <Button type="button" className="list-group-item list-group-item-action">
                                     Logout

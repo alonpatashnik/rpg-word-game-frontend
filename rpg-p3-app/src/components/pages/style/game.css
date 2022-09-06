@@ -129,6 +129,10 @@
     color: white;
 }
 
+#menuHome:hover {
+    background-color: var(--highlightMute);
+}
+
 /* .battleScrnCon{
     width: 100%;
     height: 80%;
