@@ -4,7 +4,7 @@ import { Form } from 'react-bootstrap';
 
 export default function AttackBar() {
     return (
-        <section>
+        <section id="attackCon">
             <Form.Label id="attackBox" htmlfor="attackBox">Placeholder text</Form.Label>
             <Form.Control
                 type="text"
