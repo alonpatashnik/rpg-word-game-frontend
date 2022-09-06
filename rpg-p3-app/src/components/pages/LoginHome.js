@@ -11,17 +11,17 @@ export default function LoginHome({user, logout}) {
             <p id="title">Welcome back, {user.username}</p>
             <Link to='/game'> 
             {/* <Link to='/FauxGame'> */}
-                <Button type="button" id="newBtn" className="btn text-light p-3 w-25 align-self-center mb-5">
+                <Button type="button" id="newBtn" className="btn">
                     New Adventure
                 </Button>
             </Link>
             <Link to='/game'>
-                <Button type="button" id="continueBtn" className="btn text-light p-3 w-25 align-self-center mb-4">
+                <Button type="button" id="continueBtn" className="btn">
                     Continue
                 </Button>
             </Link>
             <Link to='/Login'>
-                <Button type="button" id="logoutBtn" className="btn text-light p-3 w-25 align-self-center mb-4" onClick={logout}>
+                <Button type="button" id="logoutBtn" className="btn" onClick={logout}>
                     Logout
                 </Button>
             </Link>

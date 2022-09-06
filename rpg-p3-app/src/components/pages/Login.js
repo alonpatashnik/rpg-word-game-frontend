@@ -17,7 +17,7 @@ export default function Login({submitLoginHandler}) {
     }
 
     return (
-        <section className="m-4 justify-content-center">
+        <section id="pageCon">
             <Form id="inputCon" onSubmit={submit}>
                 <section>
                     <p id='title'>
@@ -26,13 +26,13 @@ export default function Login({submitLoginHandler}) {
                 </section>
                 <Form.Group id='emailCon'>
                     <Form.Label for="formEmailLogin" className="inputLabel">Email</Form.Label>
-                    <section className="col-sm-10">
+                    <section>
                         <Form.Control type="email" value={emailEl} controlId="formEmailLogin" id="emailInput" className="form-control" onChange={(e) => setEmailEl(e.target.value)}/>
                     </section>
                 </Form.Group>
                 <Form.Group id="passCon">
                     <Form.Label for="formPasswordLogin" className="inputLabel">Password</Form.Label>
-                    <section className="col-sm-10">
+                    <section>
                         <Form.Control type="password" value={inputEl} id="userPassword" controlId="formPasswordLogin" className="form-control" onChange={(e) => setInputEl(e.target.value)}/>
                     </section>
                 </Form.Group>

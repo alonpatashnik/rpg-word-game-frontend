@@ -8,18 +8,18 @@ import '../../style/bs.css'
 import AttackBar from '../AttackBar'
 import Avatar from '../Avatar'
 import Enemy from '../Enemy'
-import ProgressBar from '../ProgressBar'
+import AnimatedHP from '../ProgressBar'
 // import Timer from '../Timer'
 
-function Battlescreen(){
+function Battlescreen({user}){
         return (
             // <Router>
             <section className='bs'>
                 
                 <Avatar />
                 <Enemy />
-                <AttackBar />
-                <ProgressBar />
+                <AnimatedHP />
+                <AttackBar user={user}/>
                 {/* <Timer /> */}
                 {/* <Routes> */}
                     {/* <Route path="/" element={<Game/>} /> */}
