@@ -39,6 +39,10 @@
     margin-left: 1em;
 }
 
+#enemyCon {
+    background-color: transparent;
+}
+
 #enemyImg {
     border-radius: 50%;
     height: 15em;
