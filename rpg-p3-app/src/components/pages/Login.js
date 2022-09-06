@@ -11,9 +11,9 @@ export default function Login({submitLoginHandler}) {
     const [emailEl, setEmailEl] = useState('')
     const [inputEl, setInputEl] = useState('')
 
-    const submit = (e) => {
-        e.preventDefault();
-        submitLoginHandler(emailEl, inputEl)
+    const submit = async(e) => {
+        await e.preventDefault();
+        await submitLoginHandler(emailEl, inputEl)
     }
 
     return (
@@ -49,7 +49,7 @@ export default function Login({submitLoginHandler}) {
                     <p className="text-white text-center">
                         Don't have an account? Sign up 
                         <Link to='/SignUp'>
-                            <Button id="linkBtn" variant="link">here</Button>.
+                            <Button id="linkBtn" variant="link">here</Button>
                         </Link>
                     </p>
                 </Form.Group>

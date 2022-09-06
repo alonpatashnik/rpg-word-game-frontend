@@ -3,13 +3,14 @@ import './style/LoginHome.css'
 import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom';
 
-export default function LoginHome({user}) {
+export default function LoginHome({user, logout}) {
     // fetch request here, authorization option with token on localstore
     return (
-    <section id="pageCon">
+    <section id='pageCon'>
         <section className="h-100" id="contentCon">
             <p id="title">Welcome back, {user.username}</p>
-            <Link to='/game'>
+            <Link to='/game'> 
+            {/* <Link to='/FauxGame'> */}
                 <Button type="button" id="newBtn" className="btn text-light p-3 w-25 align-self-center mb-5">
                     New Adventure
                 </Button>
@@ -17,6 +18,11 @@ export default function LoginHome({user}) {
             <Link to='/game'>
                 <Button type="button" id="continueBtn" className="btn text-light p-3 w-25 align-self-center mb-4">
                     Continue
+                </Button>
+            </Link>
+            <Link to='/Login'>
+                <Button type="button" id="logoutBtn" className="btn text-light p-3 w-25 align-self-center mb-4" onClick={logout}>
+                    Logout
                 </Button>
             </Link>
         </section>

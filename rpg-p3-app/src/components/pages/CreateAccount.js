@@ -12,9 +12,11 @@ export default function CreateAccount({submitSignUpHandler}) {
     const [userEl, setUserEl] = useState('')
     const [inputEl, setInputEl] = useState('')
 
-    const submit = e=>{
-        e.preventDefault()
-        submitSignUpHandler(emailEl, userEl, inputEl)
+
+    const submit = async (e)=> {
+        await e.preventDefault()
+        await submitSignUpHandler(emailEl, userEl, inputEl)
+        
     }
 
     return (
@@ -33,19 +35,19 @@ export default function CreateAccount({submitSignUpHandler}) {
                 </Form.Group>
                 <Form.Group id="userCon">
                     <Form.Label for="inputUsername" className="inputLabel">Username</Form.Label>
-                    <section classNameName="col-sm-10">
+                    <section className="col-sm-10">
                         <Form.Control controlId="inputUsername" value={userEl} type="text" className="form-control" id="username" onChange={e=>setUserEl(e.target.value)}/>
                     </section>
                 </Form.Group>
                 <Form.Group id="passCon">
-                    <Form.Label for="inputPassword" className="inputLabel">Password</Form.Label>
+                    <Form.Label for="inputPassword" className='inputLabel'>Password</Form.Label>
                     <section className="col-sm-10">
                         <Form.Control controlId="inputPassword" value={inputEl} type="password" className="form-control" id="userPassword" onChange={e=>setInputEl(e.target.value)}/>
                     </section>
                 </Form.Group>
                 {/* <Form.Group className="form-check form-check-reverse">
                     <Form.Check className="form-check-input" type="checkbox" label="Show Password" controlId="formShowPass" id="showPass"/>
-                </Form.Group> */}
+    </Form.Group>*/}
                 <Form.Group>
                     {/* do we need to do my link thing here? or will the routing via javscript for logging in do that? */}
                     <Button id="createBtn" type="submit">
@@ -55,9 +57,9 @@ export default function CreateAccount({submitSignUpHandler}) {
                 <Form.Group>
                     <p id="toLoginCon">
                         Already have an account? Login 
-                        <Link to='/Login'>
-                            <Button id="linkBtn" variant="link">here</Button>.
-                        </Link>
+                    <Link to={'/Login'}>
+                        <Button id="linkBtn" variant='link'>here</Button>
+                    </Link>
                     </p>
                 </Form.Group>
             </Form>

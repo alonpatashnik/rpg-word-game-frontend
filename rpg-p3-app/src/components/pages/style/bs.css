@@ -1,0 +1,65 @@
+:root {
+    --background: #05080F;
+    /* opal */
+    --secondary: #9AC6C5;
+    /* amaranth purple */
+    --accent: #b6244f;
+    /* fern green */
+    --mute: #607744;
+    /* pastel pink */ 
+    --light: #da9f93;
+    /* kombu green */
+    --shadowMute: #344125;
+    /* asparagus */
+    --highlightMute: #92ad71;
+
+}
+
+* {
+    border-radius: border-box;
+}
+
+#attackCon {
+    display: flex;
+    flex-direction: column;
+}
+
+#avatarCon {
+    float: left;
+}
+
+#playerImage {
+    border-radius: 45%;
+    height: 12em;
+}
+#attackBox, #attackText{
+    justify-content: center;
+    align-items: center;
+    background-color: #394F49;
+}
+
+.roundedCircle {
+    justify-content: center;
+    align-items: center;
+    background-color: ghostwhite;
+}
+
+.hpBar {
+    justify-content: center;
+    align-items: center;
+    color: ghostwhite;
+    background-color: #394F49;
+}
+
+.float-left {
+    float: none!important;
+}
+
+/* Timer */
+
+/* AttackBox */
+
+
+/* Enemy */
+
+

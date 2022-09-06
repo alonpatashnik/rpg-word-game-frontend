@@ -1,12 +1,16 @@
 // game window will then hold the entirety of the game, so no more pages after this one.
 import './style/game.css'
+import './style/bs.css'
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import CloseButton from 'react-bootstrap/CloseButton';
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom';
+import Battlescreen from './Battlescreen/BattlescreenPage/BSP.js';
+// import { Link } from 'react-router-dom';
+
 
 export default function Game() {
+
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
@@ -14,7 +18,15 @@ export default function Game() {
     
     return (
     <>
-    <Modal show={show} onHide={handleClose} id="staticBackdrop">
+
+ 
+
+    <section id="gameContainer" className="vh-100 text-white">
+        <section id='pauseCon'>
+            <Button  onClick={handleShow} type="button" id="modalBtn" className="btn border border-0 text-white" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    Pause
+            </Button>
+            <Modal show={show} onHide={handleClose} id="staticBackdrop">
             <Modal.Header id="modalHead">
                 <CloseButton id="closeBtn" variant="white" onClick={handleClose} aria-label="Close"/>
                 <Modal.Title id="menuLabel">game paused</Modal.Title>
@@ -23,16 +35,14 @@ export default function Game() {
             <Modal.Body>
                        <section id="menuGroup">
 
-                            <Button type="button" className="list-group-item list-group-item-action">
+                            {/* <Button type="button" className="list-group-item list-group-item-action">
                                 Reload Last CheckPoint
-                            </Button>
+                            </Button> */}
 
                             
                             <Button type="button" id="modalHome" className="list-group-item list-group-item-action">
                                 Home
                             </Button>
-
-
 
                             <Button type="button" className="list-group-item list-group-item-action">
                                 Logout
@@ -45,14 +55,13 @@ export default function Game() {
                         </section>
             </Modal.Body>
         </Modal>
-    <section id="gameContainer" className="vh-100 text-white">
-      
-        <section>
-            <Button  onClick={handleShow} type="button" id="modalBtn" className="btn border border-0 text-white" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                Pause
-            </Button>
-        </section>
 
+        </section>
+   
+        <section className='battleScrnCon'>
+            <Battlescreen className="battleScrn" />
+        </section>
+        
         
     </section>
     </>

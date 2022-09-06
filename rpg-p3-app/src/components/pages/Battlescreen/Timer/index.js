@@ -28,11 +28,12 @@ const renderTime = ({ remainingTime }) => {
 function Timer() {
     return (
         <div className="time-wrapper">
-            <CountdownCircleTimer> is playing duration {300} colors = {["9CC69B"]} onComplete={() => [true, 1000]} {renderTime} </CountdownCircleTimer>
+            {/* <CountdownCircleTimer isPlayingDuration={300} colors = {["9CC69B"]} onComplete={() => [true, 1000]}>{...renderTime}</CountdownCircleTimer> */}
         </div>,
         <p className="info"> Change component properties in the code filed on the right to try difference functionalities.</p>
 
     )};
-    
+
+    export default Timer;
     // const rootElement = document.getElementById("root");
     //     ReactDOM.render(<App />, rootElement);

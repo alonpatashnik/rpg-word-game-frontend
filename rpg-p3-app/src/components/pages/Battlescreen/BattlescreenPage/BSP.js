@@ -1,30 +1,37 @@
 import React from 'react';
-
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import '../../style/bs.css'
+// import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 
 //all files 
+// import Game from '../../gameWindow'
 import AttackBar from '../AttackBar'
 import Avatar from '../Avatar'
 import Enemy from '../Enemy'
 import ProgressBar from '../ProgressBar'
-import Timer from '../Timer'
+// import Timer from '../Timer'
 
 function Battlescreen(){
         return (
-            <Router>
-            <div className='bs'>
-                <Routes>
-                    <Route path="/" element={<GameWindow/>} />
-                    <Route path="AttackBar" element={<AttackBar/>} />
+            // <Router>
+            <section className='bs'>
+                
+                <Avatar />
+                <Enemy />
+                <AttackBar />
+                <ProgressBar />
+                {/* <Timer /> */}
+                {/* <Routes> */}
+                    {/* <Route path="/" element={<Game/>} /> */}
+                    {/* <Route path="AttackBar" element={<AttackBar/>} />
                     <Route path="/Avatar" element={<Avatar/>} />
                     <Route path="/Enemy" element={<Enemy/>} />
                     <Route path="/ProgessBar" element={<ProgressBar/>} />
-                    <Route path="/Timer" element = {<Timer/>} />
-                    <Route path="*" element = {<GameWindow/>}/>
-                </Routes>
-            </div>
-        </Router>
+                    <Route path="/Timer" element = {<Timer/>} /> */}
+                    {/* <Route path="*" element = {<Game/>}/> */}
+                {/* </Routes> */}
+            </section>
+        // </Router>
         )
     }
 
