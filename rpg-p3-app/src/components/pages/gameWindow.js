@@ -19,8 +19,6 @@ export default function Game() {
     return (
     <>
 
- 
-
     <section id="gameContainer" className="vh-100 text-white">
         <section id='pauseCon'>
             <Button  onClick={handleShow} type="button" id="modalBtn" className="btn border border-0 text-white" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
@@ -33,7 +31,7 @@ export default function Game() {
             </Modal.Header>
 
             <Modal.Body>
-                       <section id="menuGroup">
+                        <section id="menuGroup">
 
                             {/* <Button type="button" className="list-group-item list-group-item-action">
                                 Reload Last CheckPoint
@@ -57,7 +55,7 @@ export default function Game() {
         </Modal>
 
         </section>
-   
+
         <section className='battleScrnCon'>
             <Battlescreen className="battleScrn" />
         </section>
