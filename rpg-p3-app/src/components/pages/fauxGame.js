@@ -1,11 +1,14 @@
-import './Attack.css'
-import { Form } from 'react-bootstrap'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import React, { useState, useEffect } from 'react'
+import Form from 'react-bootstrap/Form';
 import WordCheck from 'check-if-word'
 import Formulas from './gameFormulas'
-import React, { useState, useEffect } from 'react'
+import './style/fauxGame.css'
+import Countdown from 'react-countdown'
+import Timer from './timer'
 
 
-export default function AttackBar({user}) {
+export default function FauxGame({user}) {
     const [userWords, setUserWords] = useState('click')
     const [inputEl, setInputEl] = useState('')
     const [pointValue, setPointValue] = useState(0)
@@ -30,6 +33,15 @@ export default function AttackBar({user}) {
     }
     
     getRandomWord()
+
+    const endGame = (user, total) => {
+        fetch(`https://rpg-p3-db.herokuapp.com/api/users/${user.id}/${total}`, {
+            method: 'PUT',
+            headers: {
+                "Content-Type":"application/json"
+            }
+        }).then(alert(`Very well done, ${user.username}!! You earned a total of ${total} points!`))
+    }
 
     const submit = async (e) => {
         e.preventDefault();
@@ -60,20 +72,25 @@ export default function AttackBar({user}) {
         }
     }
 
-
-
     return (
-        <section id="attackCon">
-            <p>{userWords}</p>
-            <Form id="inputCon" onSubmit={submit}>
-                <Form.Group className="row mb-2">
-                    <Form.Label for="emailInput" class="col-sm-2 col-form-label text-white text-end">type a word that contains the letters above</Form.Label>
-                    <section className="col-sm-10">
-                        <Form.Control type="text" value={inputEl} controlId="emailInput"class="form-control" id="attackInput" onChange={e=>setInputEl(e.target.value)}/>
-                    </section>
-                </Form.Group>
-            </Form>
-            <p>Congratulations-- {lastWord} was worth {pointValue} points. Your running total is {total} </p>
-        </section>
+        <div id = "game">
+            <div>
+                <button onClick={getRandomWord}>
+                    Hello
+                </button>
+                <p>{userWords}</p>
+                <Form id="inputCon" onSubmit={submit}>
+                    <Form.Group className="row mb-2">
+                        <Form.Label for="emailInput" class="col-sm-2 col-form-label text-white text-end">type a word that contains the letters above</Form.Label>
+                        <section className="col-sm-10">
+                            <Form.Control type="text" value={inputEl} controlId="emailInput"class="form-control" id="emailInput" onChange={e=>setInputEl(e.target.value)}/>
+                        </section>
+                    </Form.Group>
+                </Form>
+                <p>Congratulations-- {lastWord} was worth {pointValue} points. Your running total is {total} </p>
+            </div>
+            <Error />
+            <Timer />
+        </div>
     )
-};
+}

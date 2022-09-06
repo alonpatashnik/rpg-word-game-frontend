@@ -9,7 +9,7 @@ import Battlescreen from './Battlescreen/BattlescreenPage/BSP.js';
 // import { Link } from 'react-router-dom';
 
 
-export default function Game() {
+export default function Game({user}) {
 
     const [show, setShow] = useState(false);
 
@@ -62,7 +62,7 @@ export default function Game() {
        
 
         <section className='battleScrnCon'>
-            <Battlescreen className="battleScrn" />
+            <Battlescreen className="battleScrn" user={user}/>
         </section>
         
         
