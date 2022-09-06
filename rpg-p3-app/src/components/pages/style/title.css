@@ -16,6 +16,7 @@
 
 * {
     font-family: 'Silkscreen', sans-serif;
+    background-color: var(--background);
 }
 
 body {
