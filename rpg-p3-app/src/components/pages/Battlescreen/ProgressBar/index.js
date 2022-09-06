@@ -4,7 +4,7 @@ import './Progess.css';
 export function AnimatedHP(){
     return (
         <section id="hpBar">
-            <ProgressBar striped variant="danger" now={100} />
+            <ProgressBar id="enemyHealth" striped variant="danger" now={60} max={60} />
             {/* <ProgressBar animated now={100} /> */}
         </section>
     )}
