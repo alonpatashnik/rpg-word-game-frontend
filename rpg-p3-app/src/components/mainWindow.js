@@ -6,6 +6,7 @@ import CreateAccount from "./pages/CreateAccount";
 import LoginHome from "./pages/LoginHome";
 import NewHome from "./pages/NewHome";
 import Game from "./pages/gameWindow";
+import PageNotFound from "./pages/404page";
 import { useState, useEffect } from "react";
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
@@ -121,6 +122,7 @@ export default function MainWindow() {
   return (
     <BrowserRouter>
       <Routes>
+       {/* <Switch> */}
         <Route path="/" element={<Title />}></Route>
         <Route path="/Home" element={<Home />}></Route>
         <Route path="/Login" element={<Login submitLoginHandler={submitLoginHandler}/>}></Route>
@@ -128,7 +130,9 @@ export default function MainWindow() {
         <Route path="/newHome" element={<NewHome />}></Route>
         <Route path="/Dashboard" element={<LoginHome user={user} logout={logout}/>}></Route>
         <Route path="/game" element={<Game user={user}/>}></Route>
+        <Route path="*" element={<PageNotFound />}></Route>
         {/* <Route path="/FauxGame" element={<FauxGame user={user}/>}></Route> */}
+       {/* </Switch> */}
       </Routes>
     </BrowserRouter>
   );
