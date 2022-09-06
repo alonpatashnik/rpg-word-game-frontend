@@ -24,12 +24,16 @@ body {
     background-color:var(--background);
 }
 
+#pageCon {
+    height: 100vh;
+}
+
 #inputCon {
     height: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-items: center;
+    align-content: center;
+    justify-content: center;
 }
 
 #title {
@@ -61,6 +65,8 @@ body {
     margin-top: 2rem;
 }
 
-/* #linkBtn {
-    
-} */
+#linkBtn {
+    margin-left: .25em;
+    text-decoration: none;
+    color: white;
+}

@@ -16,6 +16,7 @@
 
 * {
     font-family: 'Silkscreen', sans-serif;
+    background-color: var(--background);
 }
 
 body {
@@ -36,7 +37,7 @@ body {
 
 #title {
     color: white;
-    font-size: 3rem;
+    font-size: 3rem!important;
 }
 
 #startButton {

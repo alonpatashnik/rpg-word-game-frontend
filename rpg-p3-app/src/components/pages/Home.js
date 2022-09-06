@@ -7,7 +7,7 @@ function Home() {
     return (
     <section id="pageCon">
         <section className="h-100" id="contentCon">
-            <p className="text-wrap text-white fs-1 mb-5" id="title">Game Title</p>
+            <p id="title">Game Title</p>
             <Link to="/SignUp">
                 <Button type="button" id="newButton" className="btn">
                     Create Account

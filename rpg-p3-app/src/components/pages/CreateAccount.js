@@ -29,19 +29,19 @@ export default function CreateAccount({submitSignUpHandler}) {
                 </section>
                 <Form.Group id='emailCon'>
                     <Form.Label for="emailInput" className="inputLabel">Email</Form.Label>
-                    <section className="col-sm-10">
+                    <section>
                         <Form.Control type="email" value={emailEl} controlId="emailInput" className="form-control" id="emailInput" onChange={e=>setEmailEl(e.target.value)}/>
                     </section>
                 </Form.Group>
                 <Form.Group id="userCon">
                     <Form.Label for="inputUsername" className="inputLabel">Username</Form.Label>
-                    <section className="col-sm-10">
+                    <section>
                         <Form.Control controlId="inputUsername" value={userEl} type="text" className="form-control" id="username" onChange={e=>setUserEl(e.target.value)}/>
                     </section>
                 </Form.Group>
                 <Form.Group id="passCon">
                     <Form.Label for="inputPassword" className='inputLabel'>Password</Form.Label>
-                    <section className="col-sm-10">
+                    <section>
                         <Form.Control controlId="inputPassword" value={inputEl} type="password" className="form-control" id="userPassword" onChange={e=>setInputEl(e.target.value)}/>
                     </section>
                 </Form.Group>

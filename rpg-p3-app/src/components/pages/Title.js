@@ -8,9 +8,9 @@ function Title() {
     return (
     <section id="pageCon">
         <section id="contentCon">
-            <p className="text-wrap text-white fs-1" id="title">Game Title</p>
+            <p id="title">Game Title</p>
             <Link to='/Home'>
-                <Button type="button" id="startButton" className="btn bg-secondary text-light p-3 w-25 align-self-center">
+                <Button type="button" id="startButton" className="btn">
                     embark on adventure
                 </Button>
             </Link>
