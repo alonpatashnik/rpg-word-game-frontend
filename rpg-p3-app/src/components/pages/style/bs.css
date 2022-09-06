@@ -57,6 +57,7 @@
     background-color: transparent;
     justify-self: flex-end;
     align-self: center;
+    /* padding-bottom: 2em; */
     /* display: flex; */
     /* flex-direction: column;
     justify-content: flex-end;
@@ -86,11 +87,17 @@
     background-color: ghostwhite;
 } */
 
-.hpBar {
+#hpBar {
+    display: flex;
     justify-content: center;
-    align-items: center;
-    color: ghostwhite;
-    /* background-color: #394F49; */
+    align-content: center;
+    margin-top: 10px;
+    background-color: transparent;
+}
+
+#enemyHealth {
+    width: 60%;
+    
 }
 
 .float-left {
