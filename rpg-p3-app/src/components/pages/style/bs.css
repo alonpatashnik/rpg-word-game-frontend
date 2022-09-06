@@ -23,21 +23,25 @@
     flex-direction: column;
     width: 100%;
     height: 100%;
+    background-image: linear-gradient(#05080F, #344125, #607744, #92ad71);
 }
 
 
 #avatarCon {
-    justify-self: flex-end;
+    align-self: flex-start;
+    background-color: transparent;
     /* float: left; */
 }
 
 #playerImage {
     border-radius: 50%;
-    height: 12em;
+    height: 8em;
+    margin-left: 1em;
 }
 
 #enemyImg {
-    border-radius: 45%;
+    border-radius: 50%;
+    height: 15em;
 }
 
 /* #attackBox, #attackText{
@@ -46,6 +50,7 @@
     background-color: #394F49;
 } */
 #attackCon {
+    background-color: transparent;
     justify-self: flex-end;
     align-self: center;
     /* display: flex; */
@@ -81,7 +86,7 @@
     justify-content: center;
     align-items: center;
     color: ghostwhite;
-    background-color: #394F49;
+    /* background-color: #394F49; */
 }
 
 .float-left {
