@@ -1,8 +1,8 @@
 import './Attack.css'
 import { Form } from 'react-bootstrap'
 import WordCheck from 'check-if-word'
-import Formulas from './gameFormulas'
-import React, { useState, useEffect } from 'react'
+import Formulas from '../../Formulas'
+import React, { useState, useEffect, useRef } from 'react'
 
 
 export default function AttackBar({user}) {
@@ -12,9 +12,13 @@ export default function AttackBar({user}) {
     const [total, setTotal] = useState(0)
     const [lastWord, setLastWord] = useState('')
     const [valid, setValid] = useState(true)
+    const [local, setLocal] = useState([])
 
-    localStorage.setItem('words', [])
-    const successfulWords = localStorage.getItem('words')
+    
+    
+
+    // const localData = localStorage.getItem('words')
+    // const local2 = JSON.parse(localData)
 
     const check = WordCheck('en')
 
@@ -28,8 +32,6 @@ export default function AttackBar({user}) {
         setUserWords(res.word)
     })
     }
-    
-    getRandomWord()
 
     const submit = async (e) => {
         e.preventDefault();
@@ -45,7 +47,8 @@ export default function AttackBar({user}) {
                 setLastWord(inputEl)
                 setTotal(total+score)
                 setValid(true)
-                localStorage.setItem('words', [...successfulWords, inputEl])
+                setLocal(local => [...local, inputEl])
+                // localStorage.setItem('words', JSON.stringify(local))
             }
         } else {
             setValid(false)
@@ -60,19 +63,27 @@ export default function AttackBar({user}) {
         }
     }
 
-
+    const wordList = local.map(item => {
+        return (
+        <li>{item}</li>
+        )
+    })
 
     return (
-        <section id="attackCon">
+        <section id="attackBox">
+            <button onClick={getRandomWord}>Click to start</button>
             <p>{userWords}</p>
+            <p>Type a word that contains the letters above</p>
             <Form id="inputCon" onSubmit={submit}>
                 <Form.Group className="row mb-2">
-                    <Form.Label for="emailInput" class="col-sm-2 col-form-label text-white text-end">type a word that contains the letters above</Form.Label>
                     <section className="col-sm-10">
-                        <Form.Control type="text" value={inputEl} controlId="emailInput"class="form-control" id="attackInput" onChange={e=>setInputEl(e.target.value)}/>
+                        <Form.Control type="text" value={inputEl} controlId="emailInput"class="form-control" id="attackText" onChange={e=>setInputEl(e.target.value)}/>
                     </section>
                 </Form.Group>
             </Form>
+            <ul>
+                {wordList}
+            </ul>
             <p>Congratulations-- {lastWord} was worth {pointValue} points. Your running total is {total} </p>
         </section>
     )

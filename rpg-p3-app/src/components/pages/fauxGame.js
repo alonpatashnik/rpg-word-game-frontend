@@ -18,6 +18,10 @@ export default function FauxGame({user}) {
 
     localStorage.setItem('words', [])
     const successfulWords = localStorage.getItem('words')
+    const display = []
+    useEffect(() => {
+        display = localStorage.getItem('words')
+    })
 
     const check = WordCheck('en')
 
@@ -87,6 +91,7 @@ export default function FauxGame({user}) {
                         </section>
                     </Form.Group>
                 </Form>
+                <p>{...display}</p>
                 <p>Congratulations-- {lastWord} was worth {pointValue} points. Your running total is {total} </p>
             </div>
             <Error />
