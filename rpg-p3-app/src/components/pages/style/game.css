@@ -92,24 +92,35 @@
     flex-direction: column;
     width: 100vw;
     z-index: 5;
+    background-color: var(--highlightMute);
+    /* background-color: var(--secondary); */
     /* margin-bottom: 6rem; */
-    /* border-radius: 10px !important; */
+    border-radius: 10px !important;
 }
 
 #modalHead {
     margin-bottom: 2rem;
     margin-top: .5rem;
     justify-content: center;
+    background-color: var(--highlightMute);
 }
 #menuLabel {
     /* padding-left: 7rem; */
     color: white;
     font-size: 3rem;
+    background-color: var(--highlightMute);
+}
+
+#menuBody {
+    background-color: var(--highlightMute);
+    border-radius:0 0 10px 10px;
 }
 
 #menuGroup {
+    background-color: var(--highlightMute);
     display: flex;
     flex-direction: column;
+    border-radius: 10px;
 }
 
 /* .battleScrnCon{

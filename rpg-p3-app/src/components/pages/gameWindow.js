@@ -26,34 +26,35 @@ export default function Game() {
             <Button  onClick={handleShow} type="button" id="modalBtn" className="btn border border-0 text-white" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                     Pause
             </Button>
-            <Modal show={show} onHide={handleClose} id="staticBackdrop">
-            <Modal.Header id="modalHead">
-                <CloseButton id="closeBtn" variant="white" onClick={handleClose} aria-label="Close"/>
-                <Modal.Title id="menuLabel">game paused</Modal.Title>
-            </Modal.Header>
 
-            <Modal.Body>
-                       <section id="menuGroup">
 
-                            {/* <Button type="button" className="list-group-item list-group-item-action">
-                                Reload Last CheckPoint
-                            </Button> */}
+            <Modal show={show} onHide={handleClose} backdrop="static" id="staticBackdrop">
+                <Modal.Header id="modalHead">
+                    {/* <CloseButton id="closeBtn" variant="white" onClick={handleClose} aria-label="Close"/> */}
+                    <Modal.Title id="menuLabel">paused</Modal.Title>
+                </Modal.Header>
+                <Modal.Body id="menuBody">
+                        <section id="menuGroup">
 
-                            
-                            <Button type="button" id="modalHome" className="list-group-item list-group-item-action">
-                                Home
-                            </Button>
+                                {/* <Button type="button" className="list-group-item list-group-item-action">
+                                    Reload Last CheckPoint
+                                </Button> */}
 
-                            <Button type="button" className="list-group-item list-group-item-action">
-                                Logout
-                            </Button>
+                                
+                                <Button type="button" id="modalHome" className="list-group-item list-group-item-action">
+                                    Home
+                                </Button>
 
-                            <Button type="button" onClick={handleClose} className="list-group-item list-group-item-action" data-bs-dismiss="modal">
-                                Resume
-                            </Button>
+                                <Button type="button" className="list-group-item list-group-item-action">
+                                    Logout
+                                </Button>
+
+                                <Button type="button" onClick={handleClose} className="list-group-item list-group-item-action" data-bs-dismiss="modal">
+                                    Resume
+                                </Button>
 
                         </section>
-            </Modal.Body>
+                </Modal.Body>
         </Modal>
 
         </section>
