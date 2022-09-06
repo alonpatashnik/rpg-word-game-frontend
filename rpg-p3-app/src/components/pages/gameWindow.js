@@ -40,16 +40,14 @@ export default function Game({user}) {
                             </Button> */}
 
                                 {/* <Link to="/Dashboard" id='menuHome'> */}
-                                    <Button type="button" id="modalHome" className="list-group-item list-group-item-action">
-                                        <a id='menuHome' href="/Dashboard">
+                                    <Button type="button" id="modalHome" className="list-group-item list-group-item-action" href="/Dashboard">
                                             Home
-                                        </a>  
                                     </Button>
                                 {/* </Link> */}
 
-                                <Button type="button" className="list-group-item list-group-item-action">
+                                {/* <Button type="button" onClick={logout} className="list-group-item list-group-item-action">
                                     Logout
-                                </Button>
+                                </Button> */}
 
                                 <Button type="button" onClick={handleClose} className="list-group-item list-group-item-action" data-bs-dismiss="modal">
                                     Resume
@@ -58,8 +56,6 @@ export default function Game({user}) {
                         </section>
                 </Modal.Body>
         </Modal>
-
-       
 
         <section className='battleScrnCon'>
             <Battlescreen className="battleScrn" user={user}/>

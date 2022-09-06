@@ -3,7 +3,8 @@
 
 export default function Enemy(){
     return (
-        <section id='enemyCon'>
+    <section id='enemyCon'>
+
         <img id="enemyImg" alt='illustration of the headshot for the enemy' src={require('../../../imgs/PlaceholderPlayer1.png')}/>
     </section>
     )

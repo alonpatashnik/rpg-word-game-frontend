@@ -39,6 +39,10 @@
     margin-left: 1em;
 }
 
+#enemyCon {
+    background-color: transparent;
+}
+
 #enemyImg {
     border-radius: 50%;
     height: 15em;
@@ -53,6 +57,7 @@
     background-color: transparent;
     justify-self: flex-end;
     align-self: center;
+    /* padding-bottom: 2em; */
     /* display: flex; */
     /* flex-direction: column;
     justify-content: flex-end;
@@ -82,16 +87,29 @@
     background-color: ghostwhite;
 } */
 
-.hpBar {
+/* #hpbox {
+    display: flex;
+} */
+
+/* .row {
+	--bs-gutter-x: 0rem;
+} */
+
+#hpBar {
+    display: flex;
     justify-content: center;
-    align-items: center;
-    color: ghostwhite;
-    /* background-color: #394F49; */
+    align-content: center;
+    background-color: transparent;
+}
+
+.hpbox {
+    margin: 2em auto;
 }
 
 .float-left {
     float: none!important;
 }
+
 
 /* Timer */
 
