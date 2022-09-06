@@ -3,10 +3,10 @@ import './style/game.css'
 import './style/bs.css'
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
-import CloseButton from 'react-bootstrap/CloseButton';
+// import CloseButton from 'react-bootstrap/CloseButton';
 import React, { useState } from 'react'
 import Battlescreen from './Battlescreen/BattlescreenPage/BSP.js';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 export default function Game() {
@@ -40,7 +40,10 @@ export default function Game() {
 
                                 
                                 <Button type="button" id="modalHome" className="list-group-item list-group-item-action">
-                                    Home
+                                    <Link to="/Dashboard" id='menuHome'>
+                                        Home
+                                    </Link>
+                                    
                                 </Button>
 
                                 <Button type="button" className="list-group-item list-group-item-action">
