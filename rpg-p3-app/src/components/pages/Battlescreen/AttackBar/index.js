@@ -13,10 +13,22 @@ export default function AttackBar({user}) {
     const [lastWord, setLastWord] = useState('')
     const [valid, setValid] = useState(true)
     const [local, setLocal] = useState([])
+    const [localPt, setLocalPt] = useState([])
 
     
-    
+    useEffect(() => {
+        if (total >= 50 || local.length >=10) {
+            endGame()
+        }
+    })
 
+    const endGame = () => {
+        if (total >= 50) {
+            alert(`Congratulations, ${user.username}, you won the game! You entered ${local.length} words for ${total} points! averaging ${total/local.length} points per word`)
+        } else {
+            alert(`Sorry, ${user.username}, you lost! You needed 50 points to win-- you only earned ${total} points! Refresh to try again`)
+        }
+    }
     // const localData = localStorage.getItem('words')
     // const local2 = JSON.parse(localData)
 
@@ -48,10 +60,13 @@ export default function AttackBar({user}) {
                 setTotal(total+score)
                 setValid(true)
                 setLocal(local => [...local, inputEl])
+                setLocalPt(localPt => [...localPt, score])
+                setInputEl('')
                 // localStorage.setItem('words', JSON.stringify(local))
             }
         } else {
             setValid(false)
+            setInputEl('')
         }
     }
 
@@ -63,9 +78,9 @@ export default function AttackBar({user}) {
         }
     }
 
-    const wordList = local.map(item => {
+    const wordList = local.map((item, index) => {
         return (
-        <li>{item}</li>
+        <li>{(item + ' ' + localPt[index] + 'pts   ')}</li>
         )
     })
 
@@ -85,6 +100,7 @@ export default function AttackBar({user}) {
                 {wordList}
             </ul>
             <p>Congratulations-- {lastWord} was worth {pointValue} points. Your running total is {total} </p>
+            <Error />
         </section>
     )
 };
