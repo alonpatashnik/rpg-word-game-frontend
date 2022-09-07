@@ -25,6 +25,7 @@ export default function Game({user}) {
 
     <section id="gameContainer" className="vh-100 text-white">
         <section id='pauseCon'>
+            <p id="gameVersion">The Hollow Reach v.0.0.1</p>
             <Button  onClick={handleShow} type="button" id="modalBtn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                     Pause
             </Button>

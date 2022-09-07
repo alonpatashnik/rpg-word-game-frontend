@@ -1,4 +1,4 @@
-import './Attack.css'
+// import './Attack.css'
 import { Form } from 'react-bootstrap'
 import WordCheck from 'check-if-word'
 import Formulas from '../../Formulas'
@@ -106,7 +106,7 @@ export default function AttackBar({user}) {
             <button onClick={getRandomWord} id="startGame">new word</button>
             <p id='userWords'>{userWords}</p>
             <p>Type a word that contains the letters above</p>
-            <Form id="inputCon" onSubmit={submit}>
+            <Form autoComplete='off' id="inputCon" onSubmit={submit}>
                 <Form.Group className="row mb-2">
                     <section id="attackInput">
                         <Form.Control type="text" value={inputEl} controlId="emailInput" class="form-control" id="attackText" onChange={e=>setInputEl(e.target.value)}/>

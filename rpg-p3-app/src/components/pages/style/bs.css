@@ -23,7 +23,7 @@
     flex-direction: column;
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(#05080F, #344125, #7CA2DE, #9ac6c5);
+    background-image: linear-gradient(#05080F, #344125, #607744, #7CA2DE, #9ac6c5);
 }
 
 
@@ -49,8 +49,12 @@
 }
 
 #enemyImg {
-    border-radius: 50%;
+    border-radius: 30%;
     height: 15em;
+}
+
+#enemyName {
+    text-align: center;
 }
 
 /* #attackBox, #attackText{
