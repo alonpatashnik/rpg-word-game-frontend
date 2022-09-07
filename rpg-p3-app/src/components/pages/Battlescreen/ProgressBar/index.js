@@ -1,5 +1,5 @@
 import {ProgressBar} from 'react-bootstrap';
-import './Progess.css';
+// import './Progess.css';
 
 export function AnimatedHP(){
     return (
