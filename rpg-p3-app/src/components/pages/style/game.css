@@ -29,7 +29,11 @@
 
 #pauseCon {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+}
+
+#gameVersion {
+    font-size: small;
 }
 
 #modalBtn {
