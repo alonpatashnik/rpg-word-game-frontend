@@ -33,6 +33,11 @@
     /* float: left; */
 }
 
+#charName {
+    background-color: transparent;
+    margin-left: 1em;
+}
+
 #playerImage {
     border-radius: 50%;
     height: 8em;
@@ -128,6 +133,7 @@
 .float-left {
     float: none!important;
 }
+
 
 
 /* Timer */
