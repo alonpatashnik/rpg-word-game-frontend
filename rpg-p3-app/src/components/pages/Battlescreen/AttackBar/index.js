@@ -96,20 +96,20 @@ export default function AttackBar({user}) {
 
     return (
         <section id="attackBox">
-            <button onClick={getRandomWord}>Click to start</button>
-            <p>{userWords}</p>
+            <button onClick={getRandomWord} id="startGame">new word</button>
+            <p id='userWords'>{userWords}</p>
             <p>Type a word that contains the letters above</p>
             <Form id="inputCon" onSubmit={submit}>
                 <Form.Group className="row mb-2">
-                    <section className="col-sm-10">
-                        <Form.Control type="text" value={inputEl} controlId="emailInput"class="form-control" id="attackText" onChange={e=>setInputEl(e.target.value)}/>
+                    <section id="attackInput">
+                        <Form.Control type="text" value={inputEl} controlId="emailInput" class="form-control" id="attackText" onChange={e=>setInputEl(e.target.value)}/>
                     </section>
                 </Form.Group>
             </Form>
-            <ul>
+            <ul id='wordList'>
                 {wordList}
             </ul>
-            <p>Congratulations-- {lastWord} was worth {pointValue} points. Your running total is {total} </p>
+            <p id="totalSent">Congratulations-- {lastWord} was worth {pointValue} points. Your running total is {total} </p>
             <Error />
         </section>
     )
