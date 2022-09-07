@@ -1,9 +1,10 @@
-# GAME NAME
+# The Hollow Reach
 
 ## description
 
 Welcome to The Hollow Reach. 
 
+Select your adventurer, and explore the depths of the realm, yet undiscovered by your adventurer. You're a small village 
 
 
 ## table-of-contents

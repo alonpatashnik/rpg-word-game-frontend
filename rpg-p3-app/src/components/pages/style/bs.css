@@ -65,7 +65,7 @@
     /* background-color: ghostwhite; */
 }
 
-#attackInput {
+#attackText {
     /* justify-self: flex-end; */
     padding: .5em;
     color: black;
@@ -75,11 +75,30 @@
 
 }
 
-#attackInput:focus {
+#attackText:focus {
     border: 2px solid var(--shadowMute);
     box-shadow:  0px 0px 10px 7px var(--mute);
     border-color: var(--shadowMute);
 };
+
+#attackInput {
+    background-color: transparent;
+}
+
+#attackBox {
+    background-color: transparent;
+}
+
+#wordList {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: transparent;
+}
+
+
 
 /* .roundedCircle {
     justify-content: center;

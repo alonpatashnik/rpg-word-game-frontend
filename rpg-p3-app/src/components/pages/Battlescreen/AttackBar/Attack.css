@@ -1,15 +1,15 @@
-#attackBox, #attackText{
+/* #attackBox, #attackText{
     justify-content: center;
     align-items: center;
     background-color: #394F49;
-}
+} */
 
-ul {
+/* ul {
     list-style: none;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-}
+} */
 /* 
 #inputCon {
     height: 50px;
