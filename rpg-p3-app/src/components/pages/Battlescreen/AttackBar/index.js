@@ -28,6 +28,13 @@ export default function AttackBar({user}) {
         } else {
             alert(`Sorry, ${user.username}, you lost! You needed 50 points to win-- you only earned ${total} points! Refresh to try again`)
         }
+
+        fetch(`https://rpg-p3-db.herokuapp.com/api/users/${user.id}/${total}`, {
+            method: 'PUT',
+            headers:{
+                "Content-Type":"application/json"
+            }
+        })
     }
     // const localData = localStorage.getItem('words')
     // const local2 = JSON.parse(localData)

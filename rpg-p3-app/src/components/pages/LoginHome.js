@@ -11,7 +11,7 @@ export default function LoginHome({user, logout}) {
     return (
     <section id='pageCon'>
         <section className="h-100" id="contentCon">
-            <p id="title">Welcome back, {user.username}</p>
+            <p id="title">Welcome back, {user.username}. In your last game, you scored {user.points} points</p>
             <Link to='/game'> 
             {/* <Link to='/FauxGame'> */}
                 <Button type="button" id="newBtn" className="btn">
