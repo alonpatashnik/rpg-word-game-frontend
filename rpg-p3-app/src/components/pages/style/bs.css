@@ -87,22 +87,29 @@
     background-color: ghostwhite;
 } */
 
+/* #hpbox {
+    display: flex;
+} */
+
+/* .row {
+	--bs-gutter-x: 0rem;
+} */
+
 #hpBar {
     display: flex;
     justify-content: center;
     align-content: center;
-    margin-top: 10px;
     background-color: transparent;
 }
 
-#enemyHealth {
-    width: 60%;
-    
+.hpbox {
+    margin: 2em auto;
 }
 
 .float-left {
     float: none!important;
 }
+
 
 /* Timer */
 

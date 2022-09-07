@@ -11,7 +11,7 @@ import Enemy from '../Enemy'
 import AnimatedHP from '../ProgressBar'
 // import Timer from '../Timer'
 
-function Battlescreen(){
+function Battlescreen({user}){
         return (
             // <Router>
             <section className='bs'>
@@ -19,7 +19,7 @@ function Battlescreen(){
                 <Avatar />
                 <Enemy />
                 <AnimatedHP />
-                <AttackBar />
+                <AttackBar user={user}/>
                 {/* <Timer /> */}
                 {/* <Routes> */}
                     {/* <Route path="/" element={<Game/>} /> */}
