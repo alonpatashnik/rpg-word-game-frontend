@@ -1,0 +1,59 @@
+:root {
+    --background: #05080F;
+    /* opal */
+    --secondary: #9AC6C5;
+    /* amaranth purple */
+    --accent: #b6244f;
+    /* fern green */
+    --mute: #607744;
+    /* pastel pink */ 
+    --light: #da9f93;
+    /* kombu green */
+    --shadowMute: #344125;
+    /* asparagus */
+    --highlightMute: #92ad71;
+}
+
+body {
+    background-color: var(--background);
+}
+
+#pageCon {
+    height: 100vh;
+}
+
+#contentCon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+}
+
+#title {
+    color: white;
+    font-size: 3rem!important;
+}
+
+.btn {
+    border-radius: 5px;
+    padding: 5px 10px 5px 10px!important;
+    border: none!important;
+    color: white;
+    font-size: 1.5rem!important;
+    margin-bottom: 2rem;
+    background-color: var(--mute)!important;
+    box-shadow: 0 10px var(--shadowMute);
+}
+
+/* this isn't working- not gonna be red, just makes it obvious whether it's working or not */
+/* now its black???? */
+.btn:hover {
+    background-color: var(--highlightMute)!important;
+    cursor: pointer;
+}
+
+.btn:active {
+    background-color: var(--highlightMute)!important;
+    box-shadow: 0 5px var(--shadowMute)!important;
+    transform: translateY(3px)!important;
+}

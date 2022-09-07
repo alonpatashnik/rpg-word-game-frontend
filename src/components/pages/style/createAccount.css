@@ -1,0 +1,88 @@
+:root {
+    --background: #05080F;
+    /* opal */
+    --secondary: #9AC6C5;
+    /* amaranth purple */
+    --accent: #b6244f;
+    /* fern green */
+    --mute: #607744;
+    /* pastel pink */ 
+    --light: #da9f93;
+    /* kombu green */
+    --shadowMute: #344125;
+    /* asparagus */
+    --highlightMute: #92ad71;
+
+}
+
+* {
+    font-family: 'Silkscreen', sans-serif;
+    color: white;
+}
+
+
+body {
+    background-color:var(--background);
+}
+
+#pageCon {
+    height: 100vh;
+}
+
+#inputCon {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+}
+
+#title {
+    color: white;
+    font-size: 3rem;
+}
+
+#createBtn {
+    margin-top: 2rem;
+}
+
+.inputLabel {
+    margin-bottom: .5rem;
+}
+
+#emailInput {
+    padding: .25rem;
+    color: black;
+    border-radius: 5px;
+    font-size: medium;
+}
+
+#username {
+    padding: .25rem;
+    color: black;
+    border-radius: 5px;
+    font-size: medium;
+}
+
+#userPassword {
+    padding: .25rem;
+    color: black;
+    border-radius: 5px;
+    font-size: medium;
+}
+
+#emailCon {
+    margin-bottom: 1rem;
+}
+
+#userCon {
+    margin-bottom: 1rem;
+}
+
+#passCon {
+    margin-bottom: .5rem;
+}
+
+#toLoginCon {
+    color: white;
+}
