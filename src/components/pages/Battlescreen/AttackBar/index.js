@@ -42,6 +42,8 @@ export default function AttackBar({user}) {
         setPointValue(0)
         setLocal([])
         setLocalPt([])
+        let health = document.getElementById("enemyHealth")
+        health.value = 50
     }
     // const localData = localStorage.getItem('words')
     // const local2 = JSON.parse(localData)
