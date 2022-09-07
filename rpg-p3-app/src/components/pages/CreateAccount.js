@@ -7,6 +7,9 @@ import { useState } from 'react';
 
 
 export default function CreateAccount({submitSignUpHandler}) {
+    if (localStorage.getItem('token')) {
+        window.location.replace('/Dashboard')
+    }
 
     const [emailEl, setEmailEl] = useState('')
     const [userEl, setUserEl] = useState('')
