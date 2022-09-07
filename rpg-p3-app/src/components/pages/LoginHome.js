@@ -18,11 +18,11 @@ export default function LoginHome({user, logout}) {
                     New Adventure
                 </Button>
             </Link>
-            <Link to='/game'>
+            {/* <Link to='/game'>
                 <Button type="button" id="continueBtn" className="btn">
                     Continue
                 </Button>
-            </Link>
+            </Link> */}
             {/* <Link to='/Login'> */}
                 <Button type="button" id="logoutBtn" className="btn" onClick={logout}>
                     Logout
