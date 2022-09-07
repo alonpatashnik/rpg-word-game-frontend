@@ -6,7 +6,7 @@ import React, { useState, useEffect } from 'react'
 
 
 export default function AttackBar({user}) {
-    const [userWords, setUserWords] = useState('click')
+    const [userWords, setUserWords] = useState('')
     const [inputEl, setInputEl] = useState('')
     const [pointValue, setPointValue] = useState(0)
     const [total, setTotal] = useState(0)
@@ -14,6 +14,7 @@ export default function AttackBar({user}) {
     const [valid, setValid] = useState(true)
     const [local, setLocal] = useState([])
     const [localPt, setLocalPt] = useState([])
+    const [button, setButton] = useState(false)
 
     
     useEffect(() => {
@@ -35,6 +36,12 @@ export default function AttackBar({user}) {
                 "Content-Type":"application/json"
             }
         })
+        setButton(false)
+        setTotal(0)
+        setLastWord('')
+        setPointValue(0)
+        setLocal([])
+        setLocalPt([])
     }
     // const localData = localStorage.getItem('words')
     // const local2 = JSON.parse(localData)
@@ -49,6 +56,7 @@ export default function AttackBar({user}) {
         }
     }).then((data) => data.json()).then((res) => {
         setUserWords(res.word)
+        setButton(true)
     })
     }
 
@@ -103,7 +111,7 @@ export default function AttackBar({user}) {
 
     return (
         <section id="attackBox">
-            <button onClick={getRandomWord} id="startGame">new word</button>
+            <button onClick={getRandomWord} id="startGame" disabled={button}>Click to start</button>
             <p id='userWords'>{userWords}</p>
             <p>Type a word that contains the letters above</p>
             <Form id="inputCon" onSubmit={submit}>
