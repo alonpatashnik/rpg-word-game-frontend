@@ -57,6 +57,11 @@
     text-align: center;
 }
 
+#enemyHealth {
+    color: red;
+    background-color: red;
+}
+
 /* #attackBox, #attackText{
     justify-content: center;
     align-items: center;
@@ -128,10 +133,12 @@
     justify-content: center;
     align-content: center;
     background-color: transparent;
+    color: red;
 }
 
 .hpbox {
     margin: 2em auto;
+    color: red;
 }
 
 .float-left {
