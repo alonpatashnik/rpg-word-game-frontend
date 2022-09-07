@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import './Media/Arabe-Africano.m4a';
 import './Media/Game-fight.m4a';
-import './Wii-Type-Tumbao.m4a';
+import './Media/Wii-Type-Tumbao.m4a';
 import Sound from 'react-sound';
+
 // Okay, so we have 3 songs that need to play
 // -- one for the fight screen
 // -- one for the VN
