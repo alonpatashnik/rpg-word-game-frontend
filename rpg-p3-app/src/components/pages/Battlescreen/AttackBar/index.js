@@ -80,6 +80,8 @@ export default function AttackBar({user}) {
             } catch {
                 return console.log('error')
             } finally {
+                let health = document.getElementById("enemyHealth")
+                health.value -= score
                 setPointValue(score)
                 setLastWord(inputEl)
                 setTotal(total+score)
