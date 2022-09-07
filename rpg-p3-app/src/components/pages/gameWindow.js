@@ -10,6 +10,10 @@ import Battlescreen from './Battlescreen/BattlescreenPage/BSP.js';
 
 
 export default function Game({user}) {
+    
+    if (!localStorage.getItem('token')) {
+        window.location.replace('/Login')
+    }
 
     const [show, setShow] = useState(false);
 

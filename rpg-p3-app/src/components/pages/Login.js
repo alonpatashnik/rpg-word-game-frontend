@@ -7,6 +7,9 @@ import { Link } from 'react-router-dom'
 
 
 export default function Login({submitLoginHandler}) {
+    if (localStorage.getItem('token')) {
+        window.location.replace('/Dashboard')
+    }
 
     const [emailEl, setEmailEl] = useState('')
     const [inputEl, setInputEl] = useState('')

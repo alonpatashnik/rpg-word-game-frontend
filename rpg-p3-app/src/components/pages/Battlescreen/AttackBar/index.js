@@ -2,7 +2,7 @@ import './Attack.css'
 import { Form } from 'react-bootstrap'
 import WordCheck from 'check-if-word'
 import Formulas from '../../Formulas'
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect } from 'react'
 
 
 export default function AttackBar({user}) {
@@ -45,11 +45,21 @@ export default function AttackBar({user}) {
     })
     }
 
+    const checkDuplicate = (local) => {
+        const filter = local.filter(item => inputEl === item)
+
+        if (filter.length > 0) {
+            return false
+        } else {
+            return true
+        }
+    }
+
     const submit = async (e) => {
         e.preventDefault();
         const wordLC = userWords.toLowerCase()
         let score = 0
-        if(Formulas.areLettersInWord(inputEl, wordLC) && check.check(inputEl) && (wordLC !== inputEl)) {
+        if(Formulas.areLettersInWord(inputEl, wordLC) && check.check(inputEl) && (wordLC !== inputEl) && checkDuplicate(local)) {
             try {
                 score = Formulas.scoreWord(inputEl)
             } catch {

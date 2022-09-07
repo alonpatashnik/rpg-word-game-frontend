@@ -4,6 +4,9 @@ import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom';
 
 export default function LoginHome({user, logout}) {
+    if (!localStorage.getItem('token')) {
+        window.location.replace('/Login')
+    }
     // fetch request here, authorization option with token on localstore
     return (
     <section id='pageCon'>
@@ -20,11 +23,11 @@ export default function LoginHome({user, logout}) {
                     Continue
                 </Button>
             </Link>
-            <Link to='/Login'>
+            {/* <Link to='/Login'> */}
                 <Button type="button" id="logoutBtn" className="btn" onClick={logout}>
                     Logout
                 </Button>
-            </Link>
+            {/* </Link> */}
         </section>
     </section> 
     )

@@ -33,9 +33,13 @@ export default function MainWindow() {
     }).then((data) => {
       if (!data.ok) {
         localStorage.removeItem("token");
+        setUser({
+          id: 0,
+          email: '',
+          username: ''
+        })
       } else {
         data.json().then((newData) => {
-            console.log(newData)
           setUser({
             id: newData.id,
             email: newData.email,
@@ -117,6 +121,7 @@ export default function MainWindow() {
         email: '',
         username: ''
     })
+    window.location.replace('/Login')
   }
 
 
