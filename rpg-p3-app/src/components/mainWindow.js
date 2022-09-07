@@ -18,7 +18,8 @@ export default function MainWindow() {
   const [user, setUser] = useState({
     id: 0,
     email: '',
-    username: ''
+    username: '',
+    points: 0
   });
 
   useEffect(() => {
@@ -36,14 +37,16 @@ export default function MainWindow() {
         setUser({
           id: 0,
           email: '',
-          username: ''
+          username: '',
+          points: 0
         })
       } else {
         data.json().then((newData) => {
           setUser({
             id: newData.id,
             email: newData.email,
-            username: newData.username
+            username: newData.username,
+            points: newData.points
           });
         });
       }
@@ -67,7 +70,8 @@ export default function MainWindow() {
                 setUser({
                     id: res.user.id,
                     email: res.user.email,
-                    username: res.user.username
+                    username: res.user.username,
+                    points: res.user.points
                 })
                 localStorage.setItem('token', res.token)
             }
@@ -98,7 +102,8 @@ export default function MainWindow() {
                 setUser({
                     id: res.user.id,
                     email: res.user.email,
-                    username: res.user.username
+                    username: res.user.username,
+                    points: res.user.points
                 })
                 localStorage.setItem('token', res.token)
                 
@@ -119,7 +124,8 @@ export default function MainWindow() {
     setUser({
         id: 0,
         email: '',
-        username: ''
+        username: '',
+        points: 0
     })
     window.location.replace('/Login')
   }
