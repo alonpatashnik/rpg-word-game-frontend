@@ -8,9 +8,12 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bookstrap/Form';
 import Modal from 'react-bootstrap/Modal';
 import React, { useState } from 'react';
+
 import '../../src/components/imgs/Player1Fin.png';
 import '../../src/components/imgs/Player2Fin.png';
 import '../../src/components/imgs/Player3Fin.png';
+
+import './style/characterSelect.css';
 
 
 
