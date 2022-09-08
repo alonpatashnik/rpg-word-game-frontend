@@ -14,7 +14,7 @@ export default function AttackBar({user}) {
     const [valid, setValid] = useState(true)
     const [local, setLocal] = useState([])
     const [localPt, setLocalPt] = useState([])
-
+    const [button, setButton] = useState(false)
     
     useEffect(() => {
         if (total >= 50 || local.length >=10) {
@@ -35,6 +35,12 @@ export default function AttackBar({user}) {
                 "Content-Type":"application/json"
             }
         })
+        setButton(false);
+        setTotal(0);
+        setLastWord("");
+        setPointValue(0);
+        setLocal([]);
+        setLocalPt([]);
     }
     // const localData = localStorage.getItem('words')
     // const local2 = JSON.parse(localData)
@@ -49,6 +55,7 @@ export default function AttackBar({user}) {
         }
     }).then((data) => data.json()).then((res) => {
         setUserWords(res.word)
+        setButton(true);
     })
     }
 
@@ -105,7 +112,7 @@ export default function AttackBar({user}) {
 
     return (
         <section id="attackBox">
-            <button onClick={getRandomWord} id="startGame" className="btn">new word</button>
+            <button onClick={getRandomWord} id="startGame" className="btn" disabled={button}>new word</button>
             <p id='userWords'>{userWords}</p>
             <p>Type a word that contains the letters above</p>
             <ul id='wordList'>
