@@ -6,7 +6,7 @@ import React, { useState, useEffect } from 'react'
 
 
 export default function AttackBar({user}) {
-    const [userWords, setUserWords] = useState('click')
+    const [userWords, setUserWords] = useState('')
     const [inputEl, setInputEl] = useState('')
     const [pointValue, setPointValue] = useState(0)
     const [total, setTotal] = useState(0)

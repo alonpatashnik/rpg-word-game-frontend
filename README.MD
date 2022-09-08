@@ -1,70 +1,55 @@
-# Getting Started with Create React App
+## Table of Contents 
+ 1. [Screenshots](#screenshots)
+ 2. [Description](#description)
+ 4. [Deployed Link](#deployed-link)
+ 5. [User Story](#user-story)
+ 6. [Installation](#installation)
+ 7. [Utilized With](#utilized-with)
+ 8. [Credits](#credits)
+ 9. [Collaborators](#collaborators)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Screenshots!
+![titlescreen](https://user-images.githubusercontent.com/106720762/189055440-ea3abecc-720c-4dc3-9e32-0033f9ffb80a.png)
+![boss](https://user-images.githubusercontent.com/106720762/189057341-6bf1870f-3967-4a29-90ce-ba1ec54d40c5.png)
 
-## Available Scripts
+## Description 
+Our application takes you to Hollowed Realm, a tiny town with powerful secrets. You, as an adventurer, traverse the town and battle enemies via a fun (and education!) word-puzzle game. 
 
-In the project directory, you can run:
+This was developed by avid game lovers, for avid game lovers, and all else! Are you a puzzle fiend? This is the game for you. An educator wanting to engage their students? Here, check out Hollow Reach! This game allows for an enyjoyable experience for all. 
 
-### `npm start`
+## Deployed Link
+[Enter the realm of Hollow Reach!](https://funny-meerkat-dcfce3.netlify.app/)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## User Story
+As an avid gamer,
+I want a game that is enjoyable and also allows for further learning
+So that I can relax with a game, while still feeling productive.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Installation
+Please use the deployed link, as above!
 
-### `npm test`
+## Utilized-With
+* React
+* Boostrap-react
+* Check if word
+* Howler
+* NPM react-audio-player
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Credits
+[Timer Inspiration](https://codesandbox.io/s/vigorous-easley-rh33d?file=/src/index.js:1237-1328)
 
-### `npm run build`
+## Collaborators
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+via alphabetical order
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Aelin
+(https://github.com/deamonbunny)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Alon
+(https://github.com/alonpatashnik)
 
-### `npm run eject`
+Jovi
+(https://github.com/yond3r)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Lindsay
+(https://github.com/lindslewis)

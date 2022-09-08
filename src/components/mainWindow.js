@@ -103,7 +103,7 @@ export default function MainWindow() {
                     id: res.user.id,
                     email: res.user.email,
                     username: res.user.username,
-                    points: res.user.points
+                    points: 0
                 })
                 localStorage.setItem('token', res.token)
                 
