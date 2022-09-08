@@ -1,4 +1,4 @@
-import './Attack.css'
+// import './Attack.css'
 import { Form } from 'react-bootstrap'
 import WordCheck from 'check-if-word'
 import Formulas from '../../Formulas'
@@ -15,7 +15,6 @@ export default function AttackBar({user}) {
     const [local, setLocal] = useState([])
     const [localPt, setLocalPt] = useState([])
     const [button, setButton] = useState(false)
-
     
     useEffect(() => {
         if (total >= 50 || local.length >=10) {
@@ -25,7 +24,7 @@ export default function AttackBar({user}) {
 
     const endGame = () => {
         if (total >= 50) {
-            alert(`Congratulations, ${user.username}, you won the game! You entered ${local.length} words for ${total} points! averaging ${total/local.length} points per word`)
+            alert(`Congratulations, ${user.username}, you won the game! You entered ${local.length} words for ${total} points! averaging ${total/local.length} points per word. /n make sure you keep watching for updates as our game is still in development.`)
         } else {
             alert(`Sorry, ${user.username}, you lost! You needed 50 points to win-- you only earned ${total} points! Refresh to try again`)
         }
@@ -36,12 +35,12 @@ export default function AttackBar({user}) {
                 "Content-Type":"application/json"
             }
         })
-        setButton(false)
-        setTotal(0)
-        setLastWord('')
-        setPointValue(0)
-        setLocal([])
-        setLocalPt([])
+        setButton(false);
+        setTotal(0);
+        setLastWord("");
+        setPointValue(0);
+        setLocal([]);
+        setLocalPt([]);
         let health = document.getElementById("enemyHealth")
         health.value = 50
     }
@@ -58,7 +57,7 @@ export default function AttackBar({user}) {
         }
     }).then((data) => data.json()).then((res) => {
         setUserWords(res.word)
-        setButton(true)
+        setButton(true);
     })
     }
 
@@ -115,20 +114,20 @@ export default function AttackBar({user}) {
 
     return (
         <section id="attackBox">
-            <button onClick={getRandomWord} id="startGame" disabled={button}>Click to start</button>
+            <button onClick={getRandomWord} id="startGame" className="btn" disabled={button}>new word</button>
             <p id='userWords'>{userWords}</p>
             <p>Type a word that contains the letters above</p>
-            <Form id="inputCon" onSubmit={submit}>
+            <ul id='wordList'>
+                {wordList}
+            </ul>
+            <Form autoComplete='off' id="inputCon" onSubmit={submit}>
                 <Form.Group className="row mb-2">
                     <section id="attackInput">
                         <Form.Control type="text" value={inputEl} controlId="emailInput" class="form-control" id="attackText" onChange={e=>setInputEl(e.target.value)}/>
                     </section>
                 </Form.Group>
             </Form>
-            <ul id='wordList'>
-                {wordList}
-            </ul>
-            <p id="totalSent">Congratulations-- {lastWord} was worth {pointValue} points. Your running total is {total} </p>
+            <p id="totalSent">Congratulations, {lastWord} was worth {pointValue} points. Your running total is {total} </p>
             <Error />
         </section>
     )

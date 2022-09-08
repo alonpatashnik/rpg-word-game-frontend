@@ -7,21 +7,24 @@ export default function LoginHome({user, logout}) {
     if (!localStorage.getItem('token')) {
         window.location.replace('/Login')
     }
-
     const pointsAndUser = () => {
         console.log(user.points)
         if (user.points === null) {
-            return (`Welcome, ${user.username}! You havent played a game yet-- click below to start!`)
+            return (`You havent played a game yet, click below to start!`)
         } else {
-            return (`Welcome back, ${user.username}!! In your last game, you scored ${user.points} points`)
+            return (`In your last game, you scored ${user.points} points`)
         }
     }
     // fetch request here, authorization option with token on localstore
     return (
     <section id='pageCon'>
         <section className="h-100" id="contentCon">
-            <p id="title">{pointsAndUser()}</p>
+        {/* <p id="title">{pointsAndUser()}.</p> */}
+            <p id="title">Welcome, {user.username}.</p>
+            <p id="points">{pointsAndUser()}</p>
+            {/* <p id="points">In your last game, you scored {user.points} points</p> */}
             <Link to='/game'> 
+            
             {/* <Link to='/FauxGame'> */}
                 <Button type="button" id="newBtn" className="btn">
                     New Adventure
