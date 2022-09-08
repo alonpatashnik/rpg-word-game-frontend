@@ -21,6 +21,7 @@ export default function Login({submitLoginHandler}) {
 
     return (
         <section id="pageCon">
+            <section id='contentCon'>
             <Form id="inputCon" onSubmit={submit}>
                 <section>
                     <p id='title'>
@@ -57,6 +58,8 @@ export default function Login({submitLoginHandler}) {
                     </p>
                 </Form.Group>
             </Form>
+            </section>
+            
         </section>
     )
 }

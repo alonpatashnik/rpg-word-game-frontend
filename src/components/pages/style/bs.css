@@ -18,19 +18,29 @@
 * {
     border-radius: border-box;
 }
+
 .bs {
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 100%;
-    background-image: linear-gradient(#05080F, #344125, #7CA2DE, #9ac6c5);
+    /* height: 100%; */
+    background-image: linear-gradient(#05080F, #344125, #607744, #7CA2DE, #9ac6c5);
+    /* object-fit: fill; */
 }
 
+/* .battleScrnCon {
+    object-fit: fill;
+} */
 
 #avatarCon {
     align-self: flex-start;
     background-color: transparent;
     /* float: left; */
+}
+
+#charName {
+    background-color: transparent;
+    margin-left: 1em;
 }
 
 #playerImage {
@@ -44,8 +54,17 @@
 }
 
 #enemyImg {
-    border-radius: 50%;
+    border-radius: 30%;
     height: 15em;
+}
+
+#enemyName {
+    text-align: center;
+}
+
+#enemyHealth {
+    color: red;
+    background-color: red;
 }
 
 /* #attackBox, #attackText{
@@ -119,14 +138,21 @@
     justify-content: center;
     align-content: center;
     background-color: transparent;
+    /* color: red; */
 }
 
 .hpbox {
     margin: 2em auto;
+    /* color: red; */
 }
 
 .float-left {
     float: none!important;
+}
+
+#startGame {
+    color: white;
+    font-size: small;
 }
 
 

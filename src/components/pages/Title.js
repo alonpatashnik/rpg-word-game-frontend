@@ -8,7 +8,7 @@ function Title() {
     return (
     <section id="pageCon">
         <section id="contentCon">
-            <p id="title">Game Title</p>
+            <p id="title">The Hollow Reach</p>
             <Link to='/Home'>
                 <Button type="button" id="startButton" className="btn">
                     embark on adventure
