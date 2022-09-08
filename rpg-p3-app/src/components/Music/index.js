@@ -8,7 +8,22 @@ import ReactAudioPlayer from 'react-audio-player';
 />
 
 export default function Audio() {
-    const gameAudio = document.querySelectorAll()
+    const gameAudio = document.querySelector('#audioBtn');
+    gameAudio.volume = 0.20;
+    const isPlaying = false;
+
+    function toggleAudio() {
+        isPlaying ? gameAudio.pause() : gameAudio.play();
+    };
+
+    gameAudio.onplaying = function() {
+        isPlaying = true;
+    };
+
+    gameAudio.onpause = function() {
+        isPlaying = false;
+    };
+    
     return (
         <a id="audioBtn" onClick=""
     )

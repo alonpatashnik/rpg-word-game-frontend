@@ -7,6 +7,7 @@ import MainWindow from './components/mainWindow';
 const App = () => {
     return (
     <>
+        
         <MainWindow/>
     </>
         

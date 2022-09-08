@@ -12,7 +12,7 @@ export default function LoginHome({user, logout}) {
     <section id='pageCon'>
         <section className="h-100" id="contentCon">
             <p id="title">Welcome back, {user.username}.</p>
-            <p id="points">In your last game, you scored {user.points} points</p>
+            {/* <p id="points">In your last game, you scored {user.points} points</p> */}
             <Link to='/game'> 
             
             {/* <Link to='/FauxGame'> */}
