@@ -1,5 +1,6 @@
 import React from 'react';
 import MainWindow from './components/mainWindow';
+// import Audio from './components/Music/index';
 // import ReactAudioPlayer from 'react-audio-player';
 
 
@@ -7,7 +8,7 @@ import MainWindow from './components/mainWindow';
 const App = () => {
     return (
     <>
-        
+        {/* <Audio /> */}
         <MainWindow/>
     </>
         

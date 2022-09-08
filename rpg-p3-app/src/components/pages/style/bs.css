@@ -150,6 +150,10 @@
     float: none!important;
 }
 
+#startGame {
+    color: white;
+    font-size: small;
+}
 
 
 /* Timer */

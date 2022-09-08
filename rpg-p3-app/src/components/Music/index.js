@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
+// import btn from 'react-bootstrap';
 import ReactAudioPlayer from 'react-audio-player';
 
 <ReactAudioPlayer
@@ -8,9 +9,9 @@ import ReactAudioPlayer from 'react-audio-player';
 />
 
 export default function Audio() {
-    const gameAudio = document.querySelector('#audioBtn');
+    const gameAudio = document.querySelector('#wii');
     gameAudio.volume = 0.20;
-    const isPlaying = false;
+    let isPlaying = false;
 
     function toggleAudio() {
         isPlaying ? gameAudio.pause() : gameAudio.play();
@@ -23,9 +24,17 @@ export default function Audio() {
     gameAudio.onpause = function() {
         isPlaying = false;
     };
-    
+
     return (
-        <a id="audioBtn" onClick=""
+        <section>
+        <button id="audioBtn" onClick={toggleAudio()}>Music</button>
+            <audio id='wii' preload='auto' loop>
+                <source src='/Media/WiiTypeTumbao.mp3' type='audio/wav' id='wiiSong'></source>
+            </audio>
+        </section>
+      
+
+
     )
 }
 

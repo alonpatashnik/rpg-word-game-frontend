@@ -24,7 +24,7 @@ export default function AttackBar({user}) {
 
     const endGame = () => {
         if (total >= 50) {
-            alert(`Congratulations, ${user.username}, you won the game! You entered ${local.length} words for ${total} points! averaging ${total/local.length} points per word`)
+            alert(`Congratulations, ${user.username}, you won the game! You entered ${local.length} words for ${total} points! averaging ${total/local.length} points per word. /n make sure you keep watching for updates as our game is still in development.`)
         } else {
             alert(`Sorry, ${user.username}, you lost! You needed 50 points to win-- you only earned ${total} points! Refresh to try again`)
         }
@@ -105,7 +105,7 @@ export default function AttackBar({user}) {
 
     return (
         <section id="attackBox">
-            <button onClick={getRandomWord} id="startGame">new word</button>
+            <button onClick={getRandomWord} id="startGame" className="btn">new word</button>
             <p id='userWords'>{userWords}</p>
             <p>Type a word that contains the letters above</p>
             <ul id='wordList'>
@@ -118,7 +118,7 @@ export default function AttackBar({user}) {
                     </section>
                 </Form.Group>
             </Form>
-            <p id="totalSent">Congratulations-- {lastWord} was worth {pointValue} points. Your running total is {total} </p>
+            <p id="totalSent">Congratulations, {lastWord} was worth {pointValue} points. Your running total is {total} </p>
             <Error />
         </section>
     )
