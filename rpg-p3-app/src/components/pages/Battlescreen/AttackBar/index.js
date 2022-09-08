@@ -108,6 +108,9 @@ export default function AttackBar({user}) {
             <button onClick={getRandomWord} id="startGame">new word</button>
             <p id='userWords'>{userWords}</p>
             <p>Type a word that contains the letters above</p>
+            <ul id='wordList'>
+                {wordList}
+            </ul>
             <Form autoComplete='off' id="inputCon" onSubmit={submit}>
                 <Form.Group className="row mb-2">
                     <section id="attackInput">
@@ -115,9 +118,6 @@ export default function AttackBar({user}) {
                     </section>
                 </Form.Group>
             </Form>
-            <ul id='wordList'>
-                {wordList}
-            </ul>
             <p id="totalSent">Congratulations-- {lastWord} was worth {pointValue} points. Your running total is {total} </p>
             <Error />
         </section>
