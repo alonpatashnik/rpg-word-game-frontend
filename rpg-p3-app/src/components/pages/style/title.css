@@ -23,22 +23,27 @@
     
 }
 
-body {
+/* body {
     background-image: radial-gradient(circle, #da9f93, #b6244f,#440D1E,#201335);
-}
+} */
 
 #pageCon {
     height: 100vh;
-    background-image: url('../../imgs/hollowreachwoText.png');
-    background-size: cover;
+    background-image: radial-gradient(circle, #da9f93, #b6244f,#440D1E,#201335);
+
+    /* background-image: url('../../imgs/hollowreachwoText.png'); */
+    /* background-size: cover; */
 }
 
 #contentCon {
+    background-image: url('../../imgs/hollowreachwoText.png');
+    background-size: cover;
     height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-items: center;
+
 }
 
 #title {
