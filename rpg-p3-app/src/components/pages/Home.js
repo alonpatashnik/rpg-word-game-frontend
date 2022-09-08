@@ -7,7 +7,7 @@ function Home() {
     return (
     <section id="pageCon">
         <section className="h-100" id="contentCon">
-            <p id="title">Game Title</p>
+            <p id="title">The Hollow Reach</p>
             <Link to="/SignUp">
                 <Button type="button" id="newButton" className="btn">
                     Create Account

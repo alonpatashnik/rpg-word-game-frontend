@@ -24,6 +24,10 @@ body {
     background-color: var(--background);
 }
 
+#points {
+    font-size: medium;
+}
+
 #pageCon {
     height: 100vh;
 }

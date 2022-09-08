@@ -14,17 +14,23 @@
     --highlightMute: #92ad71;
 }
 
+/* #root {
+    background-image: url('../../imgs/HRFancy.png');
+} */
 * {
     font-family: 'Silkscreen', sans-serif;
     /* background-color: var(--background); */
+    
 }
 
 body {
-    background-color: var(--background);
+    background-image: radial-gradient(circle, #da9f93, #b6244f,#440D1E,#201335);
 }
 
 #pageCon {
     height: 100vh;
+    background-image: url('../../imgs/hollowreachwoText.png');
+    background-size: cover;
 }
 
 #contentCon {
